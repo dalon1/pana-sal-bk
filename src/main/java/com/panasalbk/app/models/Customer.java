@@ -1,6 +1,7 @@
 package com.panasalbk.app.models;
 
 import com.panasalbk.app.annotations.*;
+import com.panasalbk.app.models.ids.CustomerId;
 /**
  * Latest edition date: 06/02/17
  * Customer Class
@@ -11,7 +12,7 @@ import com.panasalbk.app.annotations.*;
 		author="Dannel",
 		date="19/03/2017")
 public class Customer {
-	private int id;
+	private CustomerId id;
 	private CustomerName customerName;
 	private String emailAddress;
 	private String password = "banking";
@@ -64,10 +65,10 @@ public class Customer {
 	public void setCreditCard(CreditCard creditCard) {
 		this.creditCard = creditCard;
 	}
-	public int getId() {
+	public CustomerId getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(CustomerId id) {
 		this.id = id;
 	}
 	public boolean isSigned() {
