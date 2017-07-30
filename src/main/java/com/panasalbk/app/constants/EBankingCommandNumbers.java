@@ -6,7 +6,10 @@ import com.panasalbk.app.annotations.WrittenBy;
 		author="Dannel Alon",
 		date="30/03/2017")
 public final class EBankingCommandNumbers {
-	//TODO implement all the ebanking command numbers with their name
+	// TODO implement all the ebanking command numbers with their name
+	// TODO pass the entire class to ENUM Type Class
+
+	
 	/**
 	 * Main Commands
 	 */
