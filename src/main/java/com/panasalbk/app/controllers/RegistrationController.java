@@ -1,7 +1,10 @@
 package com.panasalbk.app.controllers;
 
 import com.panasalbk.app.annotations.WrittenBy;
-import com.panasalbk.app.models.Authentication;
+
+import com.panasalbk.app.models.Registration;
+import com.panasalbk.app.providers.RegistrationProvider;
+import com.panasalbk.app.facades.RegistrationFacade;
 
 @WrittenBy(
 		author="Dannel",
@@ -9,9 +12,15 @@ import com.panasalbk.app.models.Authentication;
 		comment="Registration panel and registration behaviour should be implemented")
 public class RegistrationController {
 	public void start() {
-		// Registration Model Class - Domain Object Fields (Data)
-		Authentication authentication = new Authentication();
+		/*// Registration Model Class - Domain Object Fields (Data)
+		Registration registration = new Registration();
 		
 		// Registration Provider Class - Domain Object Methods (behavior)
+		RegistrationProvider provider = new RegistrationProvider();
+		provider.registration = registration;
+		provider.registrate();*/
+		RegistrationFacade facade = new RegistrationFacade();
+		facade.registrate(new Registration());
+		
 	}
 }

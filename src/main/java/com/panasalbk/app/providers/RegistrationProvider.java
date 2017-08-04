@@ -11,7 +11,7 @@ import com.panasalbk.app.interfaces.IRegistrationProvider;
 @WrittenBy(
 		author = "Dannel Alon",
 		date = "30/07/2017",
-		comment = "Implementing behvior for customer registration")
+		comment = "Implementing behavior for customer registration")
 public class RegistrationProvider implements IRegistrationProvider {
 	
 	public Registration registration;
@@ -27,7 +27,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 		customer.setEmailAddress(printScan("Email Address", scan));
 		customer.setPassword(printScan("Password", scan));
 		
-		this.registration.setCustomer(customer);
+		this.registration.setRegisteredCustomer(customer);
 	}
 	
 	/**
@@ -39,7 +39,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 		for (Customer existingCustomer : CustomerRepository.getCustomers()) {
 			if (existingCustomer.getEmailAddress().equalsIgnoreCase(customer.getEmailAddress())) {
 				// Removing customer from registration.
-				this.registration.setCustomer(null);
+				this.registration.setRegisteredCustomer(null);
 				this.registration.setIsUnique(false);
 				return false;
 			}
@@ -47,7 +47,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 			if (existingCustomer.getCustomerName().getFirstName().equalsIgnoreCase(customer.getCustomerName().getFirstName()) 
 					&& existingCustomer.getCustomerName().getLastName().equalsIgnoreCase(customer.getCustomerName().getLastName())) {
 				// Removing customer from registration.
-				this.registration.setCustomer(null);
+				this.registration.setRegisteredCustomer(null);
 				this.registration.setIsUnique(false);
 				return false;
 			}
@@ -88,10 +88,15 @@ public class RegistrationProvider implements IRegistrationProvider {
 	}
 
 	// Registration method
+	/*
+	 *  NOTE: Remove method from provider.
+	 *  This method would be implemented in the facade level.
+	 */
+	@Deprecated
 	public void registrate() {
 		do {
 			printRegistrationPanel();
-			checkCustomerUniqueness(this.registration.getCustomer());
+			checkCustomerUniqueness(this.registration.getRegisteredCustomer());
 			printRegistrationResult();
 			printCustomerAlreadyExistMessage();
 		} while(!registration.getIsUnique());

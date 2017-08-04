@@ -1,15 +1,20 @@
 package com.panasalbk.app.models;
 
 public class Registration {
-	private Customer customer;
+	private Customer registeredCustomer;
 	private boolean isUnique;
+	// Required fields for registration >>;
+	private String firstName;
+	private String lastName;
+	private String password;
+	private String emailAddress;
 
-	public Customer getCustomer() {
-		return customer;
+	public Customer getRegisteredCustomer() {
+		return registeredCustomer;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setRegisteredCustomer(Customer registeredCustomer) {
+		this.registeredCustomer = registeredCustomer;
 	}
 
 	public boolean getIsUnique() {

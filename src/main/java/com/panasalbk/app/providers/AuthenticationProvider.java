@@ -25,6 +25,11 @@ public class AuthenticationProvider implements IAuthenticationProvider {
 	}
 
 	// + Authentication method
+	/* NOTE: This method must be removed soon!
+	 * (non-Javadoc)
+	 * @see com.panasalbk.app.interfaces.IAuthenticationProvider#authenticate()
+	 */
+	@Deprecated
 	public void authenticate() {
 		do {
 			printAuthenticPanel();

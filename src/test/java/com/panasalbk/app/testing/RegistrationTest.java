@@ -17,12 +17,12 @@ public class RegistrationTest {
 	public void testCustomerRegistrationSuccess() {
 		Registration registration = mockRegistration("Bryan", "Maravilla", "bmaravilla@gmail.com", "password123");
 		RegistrationProvider provider = mockProvider(registration);
-		assertTrue(provider.checkCustomerUniqueness(registration.getCustomer()));
-		assertNotNull(provider.registration.getCustomer());
-		assertEquals("Bryan", provider.registration.getCustomer().getCustomerName().getFirstName());
-		assertEquals("Maravilla", provider.registration.getCustomer().getCustomerName().getLastName());
-		assertEquals("bmaravilla@gmail.com", provider.registration.getCustomer().getEmailAddress());
-		assertEquals("password123", provider.registration.getCustomer().getPassword());
+		assertTrue(provider.checkCustomerUniqueness(registration.getRegisteredCustomer()));
+		assertNotNull(provider.registration.getRegisteredCustomer());
+		assertEquals("Bryan", provider.registration.getRegisteredCustomer().getCustomerName().getFirstName());
+		assertEquals("Maravilla", provider.registration.getRegisteredCustomer().getCustomerName().getLastName());
+		assertEquals("bmaravilla@gmail.com", provider.registration.getRegisteredCustomer().getEmailAddress());
+		assertEquals("password123", provider.registration.getRegisteredCustomer().getPassword());
 		assertTrue(provider.registration.getIsUnique());
 	}
 	
@@ -30,8 +30,8 @@ public class RegistrationTest {
 	public void testCustomerRegistrationFullNameFailure() {
 		Registration registration = mockRegistration("Dannel", "Alon", "bmaravilla@gmail.com", "password123");
 		RegistrationProvider provider = mockProvider(registration);
-		assertFalse(provider.checkCustomerUniqueness(registration.getCustomer()));
-		assertNull(provider.registration.getCustomer());
+		assertFalse(provider.checkCustomerUniqueness(registration.getRegisteredCustomer()));
+		assertNull(provider.registration.getRegisteredCustomer());
 		assertFalse(provider.registration.getIsUnique());
 	}
 	
@@ -39,8 +39,8 @@ public class RegistrationTest {
 	public void testCustomerRegistrationEmailAddressFailure() {
 		Registration registration = mockRegistration("Bryan", "Maravilla", "cloe@gmail.com", "password123");
 		RegistrationProvider provider = mockProvider(registration);
-		assertFalse(provider.checkCustomerUniqueness(registration.getCustomer()));
-		assertNull(provider.registration.getCustomer());
+		assertFalse(provider.checkCustomerUniqueness(registration.getRegisteredCustomer()));
+		assertNull(provider.registration.getRegisteredCustomer());
 		assertFalse(provider.registration.getIsUnique());
 	}
 
@@ -54,8 +54,7 @@ public class RegistrationTest {
 		customer.setCustomerName(customerName);
 		customer.setEmailAddress(emailAddress);
 		customer.setPassword(password);
-		registration.setCustomer(customer);
-		registration.setCustomer(customer);
+		registration.setRegisteredCustomer(customer);
 		return registration;
 	}
 	
