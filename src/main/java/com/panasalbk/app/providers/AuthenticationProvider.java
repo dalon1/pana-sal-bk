@@ -4,6 +4,7 @@ import java.util.Scanner;
 import com.panasalbk.app.interfaces.IAuthenticationProvider;
 import com.panasalbk.app.dba.CustomerRepository;
 import com.panasalbk.app.models.Customer;
+import com.panasalbk.app.utils.ScanUtils;
 import com.panasalbk.app.models.Authentication;
 
 public class AuthenticationProvider implements IAuthenticationProvider {
@@ -11,36 +12,8 @@ public class AuthenticationProvider implements IAuthenticationProvider {
 	public Authentication authentication;
 	
 	public void printAuthenticPanel() {
-		Scanner scan = new Scanner(System.in);
-		authentication.setUsername(printScan("username", scan));
-		authentication.setPassword(printScan("password", scan));
-	}
-	
-	// ** Change method name later
-	public String printScan(String prompt, Scanner scan) {
-		System.out.printf("%s:",prompt);
-		String in = scan.next();
-		// InputValidation
-		return in;
-	}
-
-	// + Authentication method
-	/* NOTE: This method must be removed soon!
-	 * (non-Javadoc)
-	 * @see com.panasalbk.app.interfaces.IAuthenticationProvider#authenticate()
-	 */
-	@Deprecated
-	public void authenticate() {
-		do {
-			printAuthenticPanel();
-			retrieveCustomer();
-			printAuthenticResult();
-			printNotFoundCustomerMessage();
-		
-			// Number of trials is being subtracted in the 
-			// ... do-while loop condition
-		} while(!authentication.getIsAuthentic() && authentication.getNumTrials() > 0); 
-		
+		authentication.setUsername(ScanUtils.printScan("username"));
+		authentication.setPassword(ScanUtils.printScan("password"));
 	}
 
 	public Customer retrieveCustomer() {

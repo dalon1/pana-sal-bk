@@ -2,6 +2,7 @@ package com.panasalbk.app.facades;
 
 import com.panasalbk.app.interfaces.IRegistrationFacade;
 import com.panasalbk.app.models.Registration;
+import com.panasalbk.app.object_factory.provider.ObjectFactory;
 import com.panasalbk.app.providers.RegistrationProvider;
 
 public class RegistrationFacade implements IRegistrationFacade {
@@ -11,7 +12,7 @@ public class RegistrationFacade implements IRegistrationFacade {
 	 *  This method would be called in the controller level.
 	 */
 	public void registrate(Registration registration) {
-		RegistrationProvider provider = new RegistrationProvider();
+		RegistrationProvider provider = ObjectFactory.createRegistrationProvider();
 		provider.registration = registration;
 		do {
 			provider.printRegistrationPanel();

@@ -6,6 +6,7 @@ import com.panasalbk.app.dba.CustomerRepository;
 import com.panasalbk.app.models.Customer;
 import com.panasalbk.app.models.CustomerName;
 import com.panasalbk.app.models.Registration;
+import com.panasalbk.app.utils.ScanUtils;
 import com.panasalbk.app.interfaces.IRegistrationProvider;
 
 @WrittenBy(
@@ -17,15 +18,14 @@ public class RegistrationProvider implements IRegistrationProvider {
 	public Registration registration;
 
 	public void printRegistrationPanel() {
-		Scanner scan = new Scanner(System.in);
 		
 		Customer customer = new Customer();
 		CustomerName customerName = new CustomerName();
-		customerName.setFirstName(printScan("First Name", scan));
-		customerName.setLastName(printScan("Last Name", scan));
+		customerName.setFirstName(ScanUtils.printScan("First Name"));
+		customerName.setLastName(ScanUtils.printScan("Last Name"));
 		customer.setCustomerName(customerName);
-		customer.setEmailAddress(printScan("Email Address", scan));
-		customer.setPassword(printScan("Password", scan));
+		customer.setEmailAddress(ScanUtils.printScan("Email Address"));
+		customer.setPassword(ScanUtils.printScan("Password"));
 		
 		this.registration.setRegisteredCustomer(customer);
 	}
@@ -55,13 +55,6 @@ public class RegistrationProvider implements IRegistrationProvider {
 		this.registration.setIsUnique(true);
 		return true;
 	}
-
-	public String printScan(String prompt, Scanner scan) {
-		System.out.printf("Enter %s: ",prompt);
-		String in = scan.next();
-		// InputValidation
-		return in;
-	}
 	
 	public void printRegistrationResult() {
 		// printing results of the authentication
@@ -85,21 +78,6 @@ public class RegistrationProvider implements IRegistrationProvider {
 		} else {
 			System.out.println("\nRegistration completed!");
 		}
-	}
-
-	// Registration method
-	/*
-	 *  NOTE: Remove method from provider.
-	 *  This method would be implemented in the facade level.
-	 */
-	@Deprecated
-	public void registrate() {
-		do {
-			printRegistrationPanel();
-			checkCustomerUniqueness(this.registration.getRegisteredCustomer());
-			printRegistrationResult();
-			printCustomerAlreadyExistMessage();
-		} while(!registration.getIsUnique());
 	}
 	
 }
