@@ -9,6 +9,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.panasalbk.app.models.Customer;
+import com.panasalbk.app.models.CustomerName;
 import com.panasalbk.app.utils.XMLParser;
 
 public class CustomerXML extends XMLParser {
@@ -32,6 +33,11 @@ public class CustomerXML extends XMLParser {
 					// That process is a little bit more complicated...
 					tempCustomer.setEmailAddress(elem.getElementsByTagName("emailAddress").item(0).getTextContent());
 					tempCustomer.setPassword(elem.getElementsByTagName("password").item(0).getTextContent());
+					CustomerName customerName = new CustomerName();
+					Element customerNameElement = (Element) elem.getElementsByTagName("customerName").item(0);
+					customerName.setFirstName(customerNameElement.getElementsByTagName("firstName").item(0).getTextContent());
+					customerName.setLastName(customerNameElement.getElementsByTagName("lastName").item(0).getTextContent());
+					tempCustomer.setCustomerName(customerName);
 					customerList.add(tempCustomer);
 				}
 			}

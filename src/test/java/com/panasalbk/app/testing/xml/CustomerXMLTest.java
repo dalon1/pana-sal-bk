@@ -16,6 +16,8 @@ public class CustomerXMLTest {
 	public void readCustomerTemplateXMLSuccess() {
 		List<Customer> customers = CustomerRepository.getCustomerList();
 		Assert.assertEquals(4, customers.size());
+		Assert.assertEquals("Dannel", customers.get(0).getCustomerName().getFirstName());
+		Assert.assertEquals("Alon", customers.get(0).getCustomerName().getLastName());
 		Assert.assertEquals("dalon@cibc.com", customers.get(0).getEmailAddress());
 		Assert.assertEquals("dalon", customers.get(0).getPassword());
 	}

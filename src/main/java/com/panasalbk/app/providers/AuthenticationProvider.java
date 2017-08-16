@@ -18,7 +18,7 @@ public class AuthenticationProvider implements IAuthenticationProvider {
 
 	public Customer retrieveCustomer() {
 		// implement authentication
-		for (Customer cust : CustomerRepository.getCustomers()) {
+		for (Customer cust : CustomerRepository.getCustomerList()) {
 			if (cust.getEmailAddress().equalsIgnoreCase(authentication.getUsername()) &&
 					cust.getPassword().equals(authentication.getPassword())) {
 				authentication.setIsAuthentic(true);

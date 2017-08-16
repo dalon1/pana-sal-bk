@@ -36,7 +36,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 	 * 2. The customer's email address must be unique.
 	 * */
 	public boolean checkCustomerUniqueness(Customer customer) {
-		for (Customer existingCustomer : CustomerRepository.getCustomers()) {
+		for (Customer existingCustomer : CustomerRepository.getCustomerList()) {
 			if (existingCustomer.getEmailAddress().equalsIgnoreCase(customer.getEmailAddress())) {
 				// Removing customer from registration.
 				this.registration.setRegisteredCustomer(null);
