@@ -22,5 +22,21 @@ public class StringUtils {
 	public static String trim(String word) {
 		return word.trim().replaceAll("\\s","");
 	}
+	
+	/**
+	 * Check if string is empty or not.
+	 * new String(null) // Empty
+	 * new String("") 	// Empty
+	 * new String(" ") 	// not Empty
+	 * @param str
+	 * @return
+	 */
+	public static boolean isEmpty(String str) {
+		return str == null || str.length() == 0 ? true : false;			
+	}
+	
+	public static boolean isNotEmpty(String str) {
+		return !isEmpty(str);
+	}
 
 }

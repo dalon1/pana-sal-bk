@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customerList>
+	<customer>
+		<customerName>
+			<firstName>Dannel</firstName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>dalon@cibc.com</emailAddress>
+		<password>dalon</password>
+	</customer>
+	<customer>
+		<customerName>
+			<firstName>Joel</firstName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>joel@gmail.com</emailAddress>
+		<password>password</password>
+	</customer>
+	<customer>
+		<customerName>
+			<firstName>Eitan</firstName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>eitan@gmail.com</emailAddress>
+		<password>password</password>
+	</customer>
+	<customer>
+		<customerName>
+			<firstName>Cloe</firstName>
+			<lastName>Alonita</lastName>
+		</customerName>
+		<emailAddress>cloe@gmail.com</emailAddress>
+		<password>cloe64</password>
+	</customer>
+</customerList>

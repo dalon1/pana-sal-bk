@@ -27,4 +27,10 @@ public class StringUtilsTest {
 		Assert.assertEquals("test", StringUtils.trim("t e s t"));
 	}
 
+	@Test
+	public void testIsEmptySuccess() {
+		Assert.assertTrue("Must be empty.", StringUtils.isEmpty(null));
+		Assert.assertTrue("Must be empty", StringUtils.isEmpty(""));
+		Assert.assertFalse("White Spaces are not empty string", StringUtils.isEmpty(" "));
+	}
 }
