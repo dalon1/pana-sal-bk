@@ -1,5 +1,7 @@
 package com.panasalbk.app.models;
 
+import com.panasalbk.app.utils.StringUtils;
+
 public class CustomerName {
 	private String firstName;
 	private String middleName;
@@ -24,5 +26,9 @@ public class CustomerName {
 		this.lastName = lastName;
 	}
 	
-
+	public String getFullName() {
+		return 	StringUtils.isEmpty(this.middleName) ? 
+				String.format("%s %s", this.firstName, this.lastName) :
+				String.format("%s %s %s", this.firstName, this.middleName, this.lastName);
+	}
 }

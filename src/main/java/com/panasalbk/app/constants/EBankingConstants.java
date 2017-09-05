@@ -10,13 +10,14 @@ public final class EBankingConstants {
 	/*
 	 * Card Constants
 	 */
-	public static int CARD_TYPE_DEBIT = 0;
-	public static int CARD_TYPE_CREDIT = 1;
+	public static int CARD_TYPE_DEBIT 				= 0;
+	public static int CARD_TYPE_CREDIT 				= 1;
+	public static int CARD_TYPE_PREPAID 			= 2;
 	
 	/*
 	 * Account Constants
 	 */
-	public static int ACCOUNT_TYPE_CHEQUING = 0;
-	public static int ACCOUNT_TYPE_SAVING = 1;
-	public static int ACCOUNT_TYPE_CREDIT = 2;
+	public static int ACCOUNT_TYPE_CHEQUING 		= 0;
+	public static int ACCOUNT_TYPE_SAVING 			= 1;
+	public static int ACCOUNT_TYPE_CREDIT 			= 2;
 }

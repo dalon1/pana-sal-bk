@@ -11,6 +11,7 @@ import com.panasalbk.app.models.Customer;
 import com.panasalbk.app.models.CustomerName;
 import com.panasalbk.app.utils.XMLUtils;
 import com.panasalbk.app.xml.engines.CustomerXML;
+import com.panasalbk.app.constants.Templates;
 
 /**
  * Customer Repository Class.
@@ -37,8 +38,7 @@ public class CustomerRepository {
 	}
 	
 	public static List<Customer> getCustomerList() {
-		// TODO Move path to a static class in templates package
-		File file = XMLUtils.createFile("src/main/java/com/panasalbk/app/templates/tpl_customers.xml");
+		File file = XMLUtils.createFile(Templates.getCustomerPath());
 		Document doc = XMLUtils.parseDocument(file);
 		return new CustomerXML().retrieveList(doc);
 	}

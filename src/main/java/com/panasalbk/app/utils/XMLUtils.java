@@ -6,6 +6,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 public class XMLUtils {
 	/**
@@ -36,5 +37,51 @@ public class XMLUtils {
 			System.out.println("Something Happened! " +  ex.getMessage());
 		}
 		return doc;
+	}
+	
+	/**
+	 * Return value of an element
+	 * @param element
+	 * @param field
+	 * @return
+	 */
+	public static String getElementValue(Element element, String field) {
+		try {
+			return element.getElementsByTagName(field).item(0).getTextContent();
+		} catch (Exception ex) {
+			//System.out.println("Error 1: " + ex.getMessage());
+			return null;
+		}
+	}
+	
+	/**
+	 * nothing yet...
+	 * @param element
+	 * @param baseField
+	 * @param childField
+	 * @return
+	 */
+	public static String getElementChildValue(Element element, String baseField, String childField) {
+		try {
+			Element baseElement = (Element) element.getElementsByTagName(baseField).item(0);
+			return baseElement.getElementsByTagName(childField).item(0).getTextContent();
+		} catch (Exception ex) {
+			//System.out.println("Error 1: " + ex.getMessage());
+			return null;
+		}
+	}
+	
+	/**
+	 * Return the id of a respective element.
+	 * @param element
+	 * @param field
+	 * @return
+	 */
+	public static String getAttributeValue(Element element, String field) {
+		try {
+			return element.getAttribute(field);
+		} catch (Exception ex) {
+			return null;
+		}
 	}
 }

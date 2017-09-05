@@ -1,6 +1,7 @@
 package com.panasalbk.app.models.abstracts;
 
-import com.panasalbk.app.annotations.*;
+import com.panasalbk.app.annotations.WrittenBy;
+import com.panasalbk.app.models.ids.CustomerId;
 import java.util.Date;
 
 @WrittenBy(
@@ -11,11 +12,12 @@ public abstract class Card {
 	/*
 	 * Attributes >>
 	 */
+	protected CustomerId customerId;
 	protected String brand;
 	protected String cardType;
-	protected long cardNumber;
+	protected String cardNumber;
 	protected String cardNumberMasked;
-	protected int pin;
+	protected String pin;
 	protected String cardHolder;
 	protected Date expireDate;
 	protected Date validFromDate;
@@ -24,6 +26,12 @@ public abstract class Card {
 	/*
 	 * Properties >>
 	 */
+	public CustomerId getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(CustomerId customerId) {
+		this.customerId = customerId;
+	}
 	public String getBrand() {
 		return brand;
 	}
@@ -36,10 +44,10 @@ public abstract class Card {
 	public void setCardType(String cardType) {
 		this.cardType = cardType;
 	}
-	public long getCardNumber() {
+	public String getCardNumber() {
 		return cardNumber;
 	}
-	public void setCardNumber(long cardNumber) {
+	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
 	public String getCardNumberMasked() {
@@ -48,10 +56,10 @@ public abstract class Card {
 	public void setCardNumberMasked(String cardNumberMasked) {
 		this.cardNumberMasked = cardNumberMasked;
 	}
-	public int getPin() {
+	public String getPin() {
 		return pin;
 	}
-	public void setPin(int pin) {
+	public void setPin(String pin) {
 		this.pin = pin;
 	}
 	public String getCardHolder() {

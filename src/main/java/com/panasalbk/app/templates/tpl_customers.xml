@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <customerList>
-	<customer>
+	<customer id="100">
 		<customerName>
 			<firstName>Dannel</firstName>
 			<lastName>Alon</lastName>
@@ -8,15 +8,16 @@
 		<emailAddress>dalon@cibc.com</emailAddress>
 		<password>dalon</password>
 	</customer>
-	<customer>
+	<customer id="200">
 		<customerName>
 			<firstName>Joel</firstName>
+			<middleName>Israel</middleName>
 			<lastName>Alon</lastName>
 		</customerName>
 		<emailAddress>joel@gmail.com</emailAddress>
 		<password>password</password>
 	</customer>
-	<customer>
+	<customer id="300">
 		<customerName>
 			<firstName>Eitan</firstName>
 			<lastName>Alon</lastName>
@@ -24,7 +25,7 @@
 		<emailAddress>eitan@gmail.com</emailAddress>
 		<password>password</password>
 	</customer>
-	<customer>
+	<customer id="400">
 		<customerName>
 			<firstName>Cloe</firstName>
 			<lastName>Alonita</lastName>

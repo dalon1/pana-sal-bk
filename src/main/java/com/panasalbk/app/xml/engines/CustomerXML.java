@@ -10,7 +10,10 @@ import org.w3c.dom.NodeList;
 
 import com.panasalbk.app.models.Customer;
 import com.panasalbk.app.models.CustomerName;
+import com.panasalbk.app.models.ids.CustomerId;
+import com.panasalbk.app.utils.StringUtils;
 import com.panasalbk.app.utils.XMLParser;
+import com.panasalbk.app.utils.XMLUtils;
 
 public class CustomerXML extends XMLParser {
 
@@ -27,16 +30,16 @@ public class CustomerXML extends XMLParser {
 				node = nodeList.item(i);
 				
 				if (node.getNodeType() == Node.ELEMENT_NODE) {
-					Element elem = (Element) node;
+					Element element = (Element) node;
 					Customer tempCustomer = new Customer();
-					// TODO Pending to retrieve Customer Name from XML Template
-					// That process is a little bit more complicated...
-					tempCustomer.setEmailAddress(elem.getElementsByTagName("emailAddress").item(0).getTextContent());
-					tempCustomer.setPassword(elem.getElementsByTagName("password").item(0).getTextContent());
+					tempCustomer.setId(new CustomerId(XMLUtils.getAttributeValue(element, "id")));
+					tempCustomer.setEmailAddress(XMLUtils.getElementValue(element, "emailAddress"));
+					tempCustomer.setPassword(XMLUtils.getElementValue(element, "password"));
 					CustomerName customerName = new CustomerName();
-					Element customerNameElement = (Element) elem.getElementsByTagName("customerName").item(0);
-					customerName.setFirstName(customerNameElement.getElementsByTagName("firstName").item(0).getTextContent());
-					customerName.setLastName(customerNameElement.getElementsByTagName("lastName").item(0).getTextContent());
+					customerName.setFirstName(XMLUtils.getElementChildValue(element, "customerName", "firstName"));
+					if (StringUtils.isNotEmpty(XMLUtils.getElementChildValue(element, "customerName", "middleName")))
+						customerName.setMiddleName(XMLUtils.getElementChildValue(element, "customerName", "middleName"));
+					customerName.setLastName(XMLUtils.getElementChildValue(element, "customerName", "lastName"));
 					tempCustomer.setCustomerName(customerName);
 					customerList.add(tempCustomer);
 				}
