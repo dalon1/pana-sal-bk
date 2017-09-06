@@ -33,6 +33,7 @@ com/panasalbk/app/validation/InputValidation.class
 com/panasalbk/app/facades/RegistrationFacade.class
 com/panasalbk/app/interfaces/IAuthenticationProvider.class
 com/panasalbk/app/facades/AccountFacade.class
+com/panasalbk/app/providers/AccountProvider.class
 com/panasalbk/app/constants/EBankingCommands$1.class
 com/panasalbk/app/constants/EBankingCommands$4.class
 com/panasalbk/app/constants/EBankingCommandNumbers.class
@@ -46,6 +47,7 @@ com/panasalbk/app/controllers/AuthenticationController.class
 com/panasalbk/app/constants/EBankingCommands.class
 com/panasalbk/app/providers/DepositMoneyProvider.class
 com/panasalbk/app/controllers/EBankingController.class
+com/panasalbk/app/providers/ProfileProvider.class
 com/panasalbk/app/annotations/WrittenBy.class
 com/panasalbk/app/providers/PayProvider.class
 com/panasalbk/app/utils/XMLParser.class
