@@ -1,4 +1,5 @@
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/validation/CommandValidation.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IAccountFacade.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dba/CustomerRepository.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IPayProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/CustomerName.java
@@ -6,6 +7,7 @@
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controllers/AuthenticationController.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/BankAccount.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constants/EBankingCommandNumbers.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controllers/AccountController.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controllers/RegistrationController.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/lists/CreditCards.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/utils/XMLUtils.java
@@ -18,10 +20,13 @@
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/RequestMoneyProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/lists/DebitCards.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/PayProvider.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/ProfileProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/ids/CustomerId.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/abstracts/Card.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/lists/Accounts.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/facades/AccountFacade.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/CheckBalanceProvider.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IAccountProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/enumerations/InputCommands.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/App.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IRegistrationProvider.java
@@ -29,8 +34,10 @@
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/WithdrawMoneyProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/facades/RegistrationFacade.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/validation/InputValidation.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/xml/engines/CardXML.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/utils/XMLParser.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/abstracts/SingleEntity.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constants/Templates.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/executable/EBankingSystemTest.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/RegistrationProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/xml/engines/CustomerXML.java
@@ -42,9 +49,12 @@
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controllers/EBankingSystem.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/AuthenticationProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/abstracts/Account.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dba/CardRepository.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/ids/AccountId.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IRegistrationFacade.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/models/DebitCard.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/providers/AccountProvider.java
+/Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/enumerations/CardType.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constants/EBankingCommands.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/interfaces/IAuthenticationProvider.java
 /Users/AloniD/alon_neon_ws/pana-sal-bk/src/main/java/com/panasalbk/app/utils/StringUtils.java
