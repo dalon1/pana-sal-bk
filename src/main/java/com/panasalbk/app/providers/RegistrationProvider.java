@@ -17,6 +17,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 	
 	public Registration registration;
 
+	@Override
 	public void printRegistrationPanel() {
 		
 		Customer customer = new Customer();
@@ -35,6 +36,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 	 * 1. The customer's full name (first name + [middle name: not applicable] + last name) must be unique!
 	 * 2. The customer's email address must be unique.
 	 * */
+	@Override
 	public boolean checkCustomerUniqueness(Customer customer) {
 		for (Customer existingCustomer : CustomerRepository.getCustomerList()) {
 			if (existingCustomer.getEmailAddress().equalsIgnoreCase(customer.getEmailAddress())) {
@@ -56,6 +58,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 		return true;
 	}
 	
+	@Override
 	public void printRegistrationResult() {
 		// printing results of the authentication
 		final int LIMIT = 3;
@@ -69,6 +72,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 		
 	}
 
+	@Override
 	public void printCustomerAlreadyExistMessage() {
 		if (!registration.getIsUnique()) {
 			String str = "\nCustomer already exists.\n";

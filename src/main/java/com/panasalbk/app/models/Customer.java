@@ -1,7 +1,9 @@
 package com.panasalbk.app.models;
 
-import com.panasalbk.app.annotations.*;
+import com.panasalbk.app.annotations.WrittenBy;
 import com.panasalbk.app.models.ids.CustomerId;
+import com.panasalbk.app.models.lists.CreditCards;
+import com.panasalbk.app.models.lists.DebitCards;
 /**
  * Latest edition date: 06/02/17
  * Customer Class
@@ -19,8 +21,8 @@ public class Customer {
 	private String phone;
 	private Address address;
 	private BankAccount bankAccount;
-	private DebitCard debitCard;
-	private CreditCard creditCard;
+	private DebitCards debitCards;
+	private CreditCards creditCards;
 	private boolean isSigned = false;
 	
 	public CustomerName getCustomerName() {
@@ -53,18 +55,6 @@ public class Customer {
 	public void setBankAccount(BankAccount bankAccount) {
 		this.bankAccount = bankAccount;
 	}
-	public DebitCard getDebitCard() {
-		return debitCard;
-	}
-	public void setDebitCard(DebitCard debitCard) {
-		this.debitCard = debitCard;
-	}
-	public CreditCard getCreditCard() {
-		return creditCard;
-	}
-	public void setCreditCard(CreditCard creditCard) {
-		this.creditCard = creditCard;
-	}
 	public CustomerId getId() {
 		return id;
 	}
@@ -77,11 +67,22 @@ public class Customer {
 	public void setSigned(boolean isSigned) {
 		this.isSigned = isSigned;
 	}
-	
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public DebitCards getDebitCards() {
+		return debitCards;
+	}
+	public void setDebitCards(DebitCards debitCards) {
+		this.debitCards = debitCards;
+	}
+	public CreditCards getCreditCards() {
+		return creditCards;
+	}
+	public void setCreditCards(CreditCards creditCards) {
+		this.creditCards = creditCards;
 	}
 }

@@ -7,6 +7,7 @@ import com.panasalbk.app.object_factory.provider.ObjectFactory;
 
 public class AuthenticationFacade implements IAuthenticationFacade {
 
+	@Override
 	public void authenticate(Authentication authentication) {
 		AuthenticationProvider provider = ObjectFactory.createAuthenticationProvider();
 		provider.authentication = authentication;

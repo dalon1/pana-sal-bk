@@ -11,6 +11,7 @@ public class RegistrationFacade implements IRegistrationFacade {
 	 *  + its interaction with the domain object class (model).
 	 *  This method would be called in the controller level.
 	 */
+	@Override
 	public void registrate(Registration registration) {
 		RegistrationProvider provider = ObjectFactory.createRegistrationProvider();
 		provider.registration = registration;

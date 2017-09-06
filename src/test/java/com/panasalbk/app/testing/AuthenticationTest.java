@@ -9,6 +9,12 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+/**
+ * This test class would be deprecated
+ * @author AloniD
+ *
+ */
+@Deprecated
 public class AuthenticationTest {
 
 	MockCustomer mockCustomer = new MockCustomer();
