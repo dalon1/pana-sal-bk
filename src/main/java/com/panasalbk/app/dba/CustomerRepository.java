@@ -6,12 +6,12 @@ import java.util.List;
 
 import org.w3c.dom.Document;
 
-import com.panasalbk.app.annotations.WrittenBy;
-import com.panasalbk.app.models.Customer;
-import com.panasalbk.app.models.CustomerName;
-import com.panasalbk.app.utils.XMLUtils;
-import com.panasalbk.app.xml.engines.CustomerXML;
-import com.panasalbk.app.constants.Templates;
+import com.panasalbk.app.util.XMLUtils;
+import com.panasalbk.app.xml.engine.CustomerXML;
+import com.panasalbk.app.annotation.WrittenBy;
+import com.panasalbk.app.constant.Templates;
+import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.CustomerName;
 
 /**
  * Customer Repository Class.

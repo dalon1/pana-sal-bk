@@ -5,9 +5,9 @@ import java.util.List;
 import org.junit.Test;
 
 import com.panasalbk.app.dba.CardRepository;
-import com.panasalbk.app.models.DebitCard;
-import com.panasalbk.app.models.abstracts.Card;
-import com.panasalbk.app.models.CreditCard;
+import com.panasalbk.app.model.CreditCard;
+import com.panasalbk.app.model.DebitCard;
+import com.panasalbk.app.model.abstract_model.Card;
 
 import org.junit.Assert;
 

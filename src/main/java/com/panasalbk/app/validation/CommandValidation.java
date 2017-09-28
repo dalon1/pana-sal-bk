@@ -1,6 +1,7 @@
 package com.panasalbk.app.validation;
 
-import static com.panasalbk.app.constants.EBankingCommands.*;
+import static com.panasalbk.app.constant.EBankingCommands.*;
+
 import java.util.Map;
 
 /**

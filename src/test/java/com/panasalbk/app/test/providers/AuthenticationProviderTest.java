@@ -6,11 +6,11 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
-import com.panasalbk.app.models.Authentication;
-import com.panasalbk.app.models.CreditCard;
-import com.panasalbk.app.models.Customer;
-import com.panasalbk.app.models.DebitCard;
-import com.panasalbk.app.providers.AuthenticationProvider;
+import com.panasalbk.app.model.Authentication;
+import com.panasalbk.app.model.CreditCard;
+import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.DebitCard;
+import com.panasalbk.app.provider.AuthenticationProvider;
 import com.panasalbk.app.testing.mocks.MockCustomer;
 
 public class AuthenticationProviderTest {

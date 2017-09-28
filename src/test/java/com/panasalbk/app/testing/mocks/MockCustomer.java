@@ -1,8 +1,8 @@
 package com.panasalbk.app.testing.mocks;
 
-import com.panasalbk.app.models.Customer;
-import com.panasalbk.app.models.CustomerName;
-import com.panasalbk.app.annotations.WrittenBy;
+import com.panasalbk.app.annotation.WrittenBy;
+import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.CustomerName;
 
 @WrittenBy(
 		author="Dannel Alon",

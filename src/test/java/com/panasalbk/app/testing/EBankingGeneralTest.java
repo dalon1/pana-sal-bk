@@ -1,7 +1,7 @@
 package com.panasalbk.app.testing;
 
-import com.panasalbk.app.providers.AuthenticationProvider;
-import com.panasalbk.app.models.Authentication;
+import com.panasalbk.app.model.Authentication;
+import com.panasalbk.app.provider.AuthenticationProvider;
 import com.panasalbk.app.testing.mocks.MockCustomer;
 import static org.junit.Assert.*;
 

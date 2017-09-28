@@ -1,8 +1,8 @@
 package com.panasalbk.app.object_factory.provider;
 
-import com.panasalbk.app.providers.AccountProvider;
-import com.panasalbk.app.providers.AuthenticationProvider;
-import com.panasalbk.app.providers.RegistrationProvider;
+import com.panasalbk.app.provider.AccountProvider;
+import com.panasalbk.app.provider.AuthenticationProvider;
+import com.panasalbk.app.provider.RegistrationProvider;
 
 public class ObjectFactory {
 	

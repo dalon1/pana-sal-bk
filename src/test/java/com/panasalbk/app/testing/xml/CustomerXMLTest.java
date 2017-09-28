@@ -5,7 +5,7 @@ import java.util.List;
 import org.junit.Test;
 
 import com.panasalbk.app.dba.CustomerRepository;
-import com.panasalbk.app.models.Customer;
+import com.panasalbk.app.model.Customer;
 
 import org.junit.Assert;
 import org.junit.Ignore;

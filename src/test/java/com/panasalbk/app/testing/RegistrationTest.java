@@ -1,9 +1,9 @@
 package com.panasalbk.app.testing;
 
-import com.panasalbk.app.models.Customer;
-import com.panasalbk.app.models.CustomerName;
-import com.panasalbk.app.models.Registration;
-import com.panasalbk.app.providers.RegistrationProvider;
+import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.CustomerName;
+import com.panasalbk.app.model.Registration;
+import com.panasalbk.app.provider.RegistrationProvider;
 import com.panasalbk.app.testing.mocks.MockCustomer;
 import static org.junit.Assert.*;
 

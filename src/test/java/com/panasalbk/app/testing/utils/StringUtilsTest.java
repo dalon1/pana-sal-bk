@@ -2,7 +2,7 @@ package com.panasalbk.app.testing.utils;
 
 import org.junit.Test;
 import org.junit.Assert;
-import com.panasalbk.app.utils.StringUtils;
+import com.panasalbk.app.util.StringUtils;
 
 
 public class StringUtilsTest {

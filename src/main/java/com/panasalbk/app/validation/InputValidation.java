@@ -1,6 +1,8 @@
 package com.panasalbk.app.validation;
 
-import com.panasalbk.app.annotations.*;
+import com.panasalbk.app.annotation.WrittenBy;
+import com.panasalbk.app.annotation.WrittenBy;
+
 /**
  * Input Validation Class -
  * Responsible to validate all User input.

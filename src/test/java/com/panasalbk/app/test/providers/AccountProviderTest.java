@@ -5,9 +5,9 @@ import java.util.List;
 import org.junit.Test;
 import org.junit.Ignore;
 
-import com.panasalbk.app.models.Customer;
-import com.panasalbk.app.models.abstracts.Card;
-import com.panasalbk.app.models.ids.CustomerId;
+import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.abstract_model.Card;
+import com.panasalbk.app.model.id.CustomerId;
 import com.panasalbk.app.object_factory.provider.ObjectFactory;
 
 import org.junit.Assert;

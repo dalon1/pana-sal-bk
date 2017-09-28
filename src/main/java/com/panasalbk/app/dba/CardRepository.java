@@ -5,11 +5,11 @@ import java.util.List;
 
 import org.w3c.dom.Document;
 
-import com.panasalbk.app.annotations.WrittenBy;
-import com.panasalbk.app.constants.Templates;
-import com.panasalbk.app.models.abstracts.Card;
-import com.panasalbk.app.utils.XMLUtils;
-import com.panasalbk.app.xml.engines.CardXML;
+import com.panasalbk.app.annotation.WrittenBy;
+import com.panasalbk.app.constant.Templates;
+import com.panasalbk.app.model.abstract_model.Card;
+import com.panasalbk.app.util.XMLUtils;
+import com.panasalbk.app.xml.engine.CardXML;
 
 /**
  * Card Repository Class
