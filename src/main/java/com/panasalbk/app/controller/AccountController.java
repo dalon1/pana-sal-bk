@@ -30,7 +30,7 @@ public class AccountController {
 		return null;
 	}
 	
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.PUT)
 	public AccountDto updateAccount() {
 		return null;
 	}

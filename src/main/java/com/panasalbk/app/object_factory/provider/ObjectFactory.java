@@ -2,6 +2,7 @@ package com.panasalbk.app.object_factory.provider;
 
 import com.panasalbk.app.provider.AccountProvider;
 import com.panasalbk.app.provider.AuthenticationProvider;
+import com.panasalbk.app.provider.ProfileProvider;
 import com.panasalbk.app.provider.RegistrationProvider;
 
 public class ObjectFactory {
@@ -16,5 +17,9 @@ public class ObjectFactory {
 	
 	public static AccountProvider createAccountProvider() {
 		return new AccountProvider();
+	}
+	
+	public static ProfileProvider createProfileProvider() {
+		return new ProfileProvider();
 	}
 }
