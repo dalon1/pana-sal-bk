@@ -1,5 +1,6 @@
 package com.panasalbk.app.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,12 +27,12 @@ public class AccountController {
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public AccountDto addAccount() {
+	public AccountDto addAccount(@RequestBody AccountDto accountDto) {
 		return null;
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT)
-	public AccountDto updateAccount() {
+	public AccountDto updateAccount(@RequestBody AccountDto accountDto) {
 		return null;
 	}
 	

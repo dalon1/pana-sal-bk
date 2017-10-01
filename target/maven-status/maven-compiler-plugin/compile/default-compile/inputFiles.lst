@@ -21,6 +21,7 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/ProfileDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/facade/RegistrationFacade.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/Address.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/enumeration/AccountType.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/PayProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/enumeration/InputCommands.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/CheckBalanceProvider.java

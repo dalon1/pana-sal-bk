@@ -13,19 +13,21 @@ import com.panasalbk.app.facade.ProfileFacade;
 @RestController
 @RequestMapping("/profile")
 public class ProfileController {
+	// @Inject - Use Beam Injection
+	private static ProfileFacade profileFacade = new ProfileFacade();
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ProfileDto getProfile(@PathVariable(value = "id") String id) {
-		return new ProfileFacade().getProfile(id);
+		return profileFacade.getProfile(id);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public ProfileDto addProfile(@RequestBody ProfileDto profileDto) {
-		return null;
+		return profileFacade.addProfile(profileDto);
 	}
 	
 	@RequestMapping(method = RequestMethod.PUT)
 	public ProfileDto updateProfile(@RequestBody ProfileDto profileDto) {
-		return null;
+		return profileFacade.updateProfile(profileDto);
 	}
 }

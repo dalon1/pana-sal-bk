@@ -9,25 +9,28 @@ import com.panasalbk.app.object_factory.provider.ObjectFactory;
 import com.panasalbk.app.provider.ProfileProvider;
 
 public class ProfileFacade implements IProfileFacade {
-
+	
+	// @Injection - Use beam injection
+	private ProfileProvider profileProvider = ObjectFactory.createProfileProvider();
+	// @Injection - Use beam injection
+	private ProfileMapper profileMapper = new ProfileMapper();
+	
 	@Override
 	public ProfileDto getProfile(String id) {
-		ProfileProvider profileProvider = ObjectFactory.createProfileProvider();
 		Profile profile = profileProvider.getProfile(new CustomerId(id));
-		ProfileDto profileDto = new ProfileMapper().toDto(profile);
-		return profileDto;
+		return profileMapper.toDto(profile);
 	}
 
 	@Override
 	public ProfileDto addProfile(ProfileDto profileDto) {
-		// TODO Auto-generated method stub
-		return null;
+		Profile profile = profileProvider.addProfile(profileMapper.toModel(profileDto));
+		return profileMapper.toDto(profile);
 	}
 
 	@Override
 	public ProfileDto updateProfile(ProfileDto profileDto) {
-		// TODO Auto-generated method stub
-		return null;
+		profileProvider.updateProfile(profileMapper.toModel(profileDto));
+		return profileDto;
 	}
 
 }
