@@ -10,7 +10,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 public class EBankingGeneralTest {
-
+/*
 	MockCustomer mockCustomer = new MockCustomer();
 	@Test
 	@Ignore
@@ -58,5 +58,5 @@ public class EBankingGeneralTest {
 		AuthenticationProvider provider = new AuthenticationProvider();
 		provider.authentication = authentication;
 		return provider;
-	}
+	}*/
 }

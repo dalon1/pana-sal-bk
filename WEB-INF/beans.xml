@@ -21,4 +21,7 @@
    
    <bean id = "authenticationFacade" class = "com.panasalbk.app.facade.AuthenticationFacade">
    </bean>
+   
+   <bean id = "authenticationMapper" class = "com.panasalbk.app.mapper.AuthenticationMapper">
+   </bean>
 </beans>

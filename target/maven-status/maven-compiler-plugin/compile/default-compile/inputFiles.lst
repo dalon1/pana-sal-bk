@@ -44,6 +44,7 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/DepositMoneyProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/list/DebitCards.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/ViewAccountInfoProvider.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/mapper/AuthenticationMapper.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/DebitCard.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/ifacade/IProfileFacade.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constant/EBankingConstants.java

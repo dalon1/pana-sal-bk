@@ -18,7 +18,7 @@ import org.junit.Test;
 public class AuthenticationTest {
 
 	MockCustomer mockCustomer = new MockCustomer();
-	@Test
+	/*@Test
 	public void authenticateRegisteredCustomer() {
 		Authentication auth = mockAuthentication(
 				mockCustomer.getRegisteredCustomer().getEmailAddress(),
@@ -53,5 +53,5 @@ public class AuthenticationTest {
 		AuthenticationProvider provider = new AuthenticationProvider();
 		provider.authentication = authentication;
 		return provider;
-	}
+	}*/
 }

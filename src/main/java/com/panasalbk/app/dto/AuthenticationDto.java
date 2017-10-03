@@ -1,9 +1,21 @@
 package com.panasalbk.app.dto;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import com.panasalbk.app.model.id.CustomerId;
+
 public class AuthenticationDto {
+	@NotEmpty
+	@NotNull
+	@NotBlank
 	private String emailAddress;
+	@NotEmpty
 	private String password;
-	private CustomerDto customer;
+	private CustomerId customerId;
+	//private List<Capability> capability;
 	
 	public String getEmailAddress() {
 		return emailAddress;
@@ -17,10 +29,10 @@ public class AuthenticationDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public CustomerDto getCustomer() {
-		return customer;
+	public CustomerId getCustomerId() {
+		return customerId;
 	}
-	public void setCustomer(CustomerDto customer) {
-		this.customer = customer;
+	public void setCustomerId(CustomerId customerId) {
+		this.customerId = customerId;
 	}
 }

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.panasalbk.app.model.Authentication;
@@ -14,7 +15,7 @@ import com.panasalbk.app.provider.AuthenticationProvider;
 import com.panasalbk.app.testing.mocks.MockCustomer;
 
 public class AuthenticationProviderTest {
-	MockCustomer mockCustomer = new MockCustomer();
+	/*MockCustomer mockCustomer = new MockCustomer();
 	@Test
 	public void authenticateRegisteredCustomer() {
 		Authentication auth = mockAuthentication(
@@ -65,6 +66,6 @@ public class AuthenticationProviderTest {
 		AuthenticationProvider provider = new AuthenticationProvider();
 		provider.authentication = authentication;
 		return provider;
-	}
+	}*/
 
 }

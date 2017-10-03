@@ -1,7 +1,10 @@
 package com.panasalbk.app.ifacade;
 
-import com.panasalbk.app.model.Authentication;
+import javax.validation.Valid;
+
+import com.panasalbk.app.dto.AuthenticationDto;
 
 public interface IAuthenticationFacade {
-	public void authenticate(Authentication authentication);
+	public AuthenticationDto getAuthentication();
+	public AuthenticationDto authenticate(@Valid AuthenticationDto authenticationDto);
 }
