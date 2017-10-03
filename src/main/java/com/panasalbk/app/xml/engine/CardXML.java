@@ -3,6 +3,7 @@ package com.panasalbk.app.xml.engine;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -17,6 +18,7 @@ import com.panasalbk.app.model.id.CustomerId;
 import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
+@Component
 public class CardXML extends XMLParser {
 
 	@Override

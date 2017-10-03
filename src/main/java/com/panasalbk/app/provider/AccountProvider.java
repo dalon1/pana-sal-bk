@@ -3,14 +3,19 @@ package com.panasalbk.app.provider;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
+
 import com.panasalbk.app.dba.CardRepository;
 import com.panasalbk.app.iprovider.IAccountProvider;
 import com.panasalbk.app.model.BankAccount;
 import com.panasalbk.app.model.abstract_model.Card;
 import com.panasalbk.app.model.id.CustomerId;
 
+@Component
 public class AccountProvider implements IAccountProvider{
-
+	
 	@Override
 	public Card addCard() {
 		// TODO Auto-generated method stub

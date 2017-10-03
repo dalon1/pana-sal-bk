@@ -4,9 +4,9 @@ import com.panasalbk.app.dto.AccountDto;
 import com.panasalbk.app.model.id.AccountId;
 
 public interface IAccountFacade {
-	public AccountDto getAccounts();
-	public AccountDto getSingleAccount(AccountId accountId);
+	public AccountDto getAccounts(String customerId);
+	public AccountDto getSingleAccount(String customerId, String accountId);
 	public AccountDto addAccount(AccountDto accountDto);
 	public AccountDto updateAccount(AccountDto accountDto);
-	public void deleteAccount(AccountId accountId);
+	public void deleteAccount(String accountId);
 }

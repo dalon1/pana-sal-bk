@@ -3,6 +3,7 @@ package com.panasalbk.app.dba;
 import java.io.File;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 
 import com.panasalbk.app.annotation.WrittenBy;
@@ -22,7 +23,8 @@ import com.panasalbk.app.xml.engine.CardXML;
 		comment = "Simulate a fake database. XML Templates used.")
 public class CardRepository {
 
-	public static List<Card> getCardList() {
+	
+	public  static List<Card> getCardList() {
 		File file = XMLUtils.createFile(Templates.getCardPath());
 		Document document = XMLUtils.parseDocument(file);
 		return new CardXML().retrieveList(document);

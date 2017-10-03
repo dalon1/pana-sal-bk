@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.w3c.dom.Document;
 
 import com.panasalbk.app.util.XMLUtils;

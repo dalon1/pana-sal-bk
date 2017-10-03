@@ -4,24 +4,27 @@
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
+   
    <!-- A simple bean definition -->
    <bean id = "profileFacade" class = "com.panasalbk.app.facade.ProfileFacade">
       <!-- collaborators and configuration for this bean go here -->
    </bean>
-
    <bean id = "profileProvider" class = "com.panasalbk.app.provider.ProfileProvider">
    </bean>
-   
    <bean id = "profileMapper" class = "com.panasalbk.app.mapper.ProfileMapper">
    </bean>
    
    <bean id = "authenticationProvider" class = "com.panasalbk.app.provider.AuthenticationProvider">
    </bean>
-   
    <bean id = "authenticationFacade" class = "com.panasalbk.app.facade.AuthenticationFacade">
    </bean>
-   
    <bean id = "authenticationMapper" class = "com.panasalbk.app.mapper.AuthenticationMapper">
+   </bean>
+   
+   <bean id = "accountProvider" class = "com.panasalbk.app.provider.AccountProvider">
+   </bean>
+   <bean id = "accountFacade" class = "com.panasalbk.app.facade.AccountFacade">
+   </bean>
+   <bean id = "accountMapper" class = "com.panasalbk.app.mapper.AccountMapper">
    </bean>
 </beans>

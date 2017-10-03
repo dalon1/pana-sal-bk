@@ -3,6 +3,7 @@ package com.panasalbk.app.xml.engine;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,6 +17,7 @@ import com.panasalbk.app.util.StringUtils;
 import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
+@Component
 public class ProfileXML extends XMLParser {
 
 	@Override

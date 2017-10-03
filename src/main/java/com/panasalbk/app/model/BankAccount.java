@@ -2,15 +2,19 @@ package com.panasalbk.app.model;
 
 import com.panasalbk.app.model.id.AccountId;
 import com.panasalbk.app.model.list.DebitCards;
+import com.panasalbk.app.model.list.SavingAccounts;
 import com.panasalbk.app.model.list.CreditCards;
 import com.panasalbk.app.model.list.Accounts;
+import com.panasalbk.app.model.list.ChequingAccounts;
 
 public class BankAccount {
 	private AccountId accountId;
 	private Customer customer;
 	private DebitCards debitCards;
 	private CreditCards creditCards;
-	private Accounts accounts;
+	private ChequingAccounts chequingAccounts;
+	private SavingAccounts savingAccounts;
+	
 	public AccountId getAccountId() {
 		return accountId;
 	}
@@ -35,12 +39,16 @@ public class BankAccount {
 	public void setCreditCards(CreditCards creditCards) {
 		this.creditCards = creditCards;
 	}
-	public Accounts getAccounts() {
-		return accounts;
+	public ChequingAccounts getChequingAccounts() {
+		return chequingAccounts;
 	}
-	public void setAccounts(Accounts accounts) {
-		this.accounts = accounts;
+	public void setChequingAccounts(ChequingAccounts chequingAccounts) {
+		this.chequingAccounts = chequingAccounts;
 	}
-	
-	
+	public SavingAccounts getSavingAccounts() {
+		return savingAccounts;
+	}
+	public void setSavingAccounts(SavingAccounts savingAccounts) {
+		this.savingAccounts = savingAccounts;
+	}
 }

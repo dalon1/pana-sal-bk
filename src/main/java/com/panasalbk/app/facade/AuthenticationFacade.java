@@ -23,7 +23,7 @@ public class AuthenticationFacade implements IAuthenticationFacade {
 	@Override
 	public AuthenticationDto getAuthentication() {
 		// TODO Auto-generated method stub
-		return null;
+		return authenticationMapper.toDto(authenticationProvider.getAuthentication());
 	}
 
 	@Override

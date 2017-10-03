@@ -36,12 +36,14 @@ public class AuthenticationProvider implements IAuthenticationProvider {
 		
 		// Retrieve Capabilities >>
 		// Retrieve Session here >>
+		// Cache result here>>
 		return authentication;
 	}
 
 	@Override
 	public Authentication getAuthentication() {
 		// TODO Auto-generated method stub
+		// Retrieve cache here
 		return null;
 	}
 	
