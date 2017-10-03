@@ -3,6 +3,8 @@ package com.panasalbk.app;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.panasalbk.app.util.StringUtils;
+
 /**
  * Hello world!
  *
@@ -12,7 +14,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        StringUtils.printTitle("PANASAL BANK - DANNEL ALON - EBANKING");
         SpringApplication.run(App.class, args);
     }
 }

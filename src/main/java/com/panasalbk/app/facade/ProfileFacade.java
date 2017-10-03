@@ -1,19 +1,26 @@
 package com.panasalbk.app.facade;
 
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
+
 import com.panasalbk.app.dto.ProfileDto;
 import com.panasalbk.app.ifacade.IProfileFacade;
+import com.panasalbk.app.iprovider.IProfileProvider;
 import com.panasalbk.app.mapper.ProfileMapper;
 import com.panasalbk.app.model.Profile;
 import com.panasalbk.app.model.id.CustomerId;
-import com.panasalbk.app.object_factory.provider.ObjectFactory;
-import com.panasalbk.app.provider.ProfileProvider;
 
+
+
+@Component
 public class ProfileFacade implements IProfileFacade {
 	
-	// @Injection - Use beam injection
-	private ProfileProvider profileProvider = ObjectFactory.createProfileProvider();
-	// @Injection - Use beam injection
-	private ProfileMapper profileMapper = new ProfileMapper();
+	@Inject
+	public IProfileProvider profileProvider;
+	
+	@Inject
+	public ProfileMapper profileMapper;
 	
 	@Override
 	public ProfileDto getProfile(String id) {

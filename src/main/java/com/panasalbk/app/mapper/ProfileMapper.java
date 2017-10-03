@@ -1,11 +1,14 @@
 package com.panasalbk.app.mapper;
 
+import org.springframework.stereotype.Component;
+
 import com.panasalbk.app.dto.ProfileDto;
 import com.panasalbk.app.model.CustomerName;
 import com.panasalbk.app.model.Profile;
 import com.panasalbk.app.model.abstract_model.Mapper;
 import com.panasalbk.app.util.StringUtils;
 
+@Component
 public class ProfileMapper extends Mapper<ProfileDto, Profile> {
 
 	@Override

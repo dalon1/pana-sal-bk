@@ -38,5 +38,19 @@ public class StringUtils {
 	public static boolean isNotEmpty(String str) {
 		return !isEmpty(str);
 	}
+	/**
+	 * Print title when starting application
+	 * @param title
+	 */
+	public static void printTitle(String title) {
+    	String s = "";
+    	for (int i = 0; i < 5; i++) {
+    		s += i % 2 == 0 ? String.format("**%s**",title.replaceAll(".", "*")) :
+    			String.format("* %s *", title);
+    		s += "\n";
+    			
+    	}
+    	System.out.println(s);
+    }
 
 }

@@ -47,6 +47,18 @@
     	<scope>test</scope>
     </dependency>
     <!--  dependencies for spring framework : end -->
+    
+    <!--  dependencies for inject & autowire annotations -->
+    <dependency>
+    	<groupId>javax.inject</groupId>
+    	<artifactId>javax.inject</artifactId>
+    	<version>1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-context</artifactId>
+    	<version>4.3.4.RELEASE</version>
+    </dependency>
   </dependencies>
   
   <!-- build plugins for spring framework  -->
