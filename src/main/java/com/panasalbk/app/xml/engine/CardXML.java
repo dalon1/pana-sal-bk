@@ -19,7 +19,7 @@ import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
 @Component
-public class CardXML extends XMLParser {
+public class CardXML extends XMLParser<Card> {
 
 	@Override
 	public List<Card> retrieveList(Document idoc) {
@@ -87,6 +87,18 @@ public class CardXML extends XMLParser {
 	}
 	
 	private void readPrepaidCard(Element element) {
+		
+	}
+
+	@Override
+	public void appendInstance(Card object, Document doc) {
+		// TODO Auto-generated method stub
+		//return null;
+	}
+
+	@Override
+	public void removeInstance(Card object, Document doc) {
+		// TODO Auto-generated method stub
 		
 	}
 

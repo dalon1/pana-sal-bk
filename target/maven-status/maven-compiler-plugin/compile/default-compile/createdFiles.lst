@@ -1,3 +1,4 @@
+com/panasalbk/app/model/list/SavingAccounts.class
 com/panasalbk/app/iprovider/IProfileProvider.class
 com/panasalbk/app/annotation/WrittenBy.class
 com/panasalbk/app/mapper/ProfileMapper.class
@@ -13,6 +14,7 @@ com/panasalbk/app/provider/DepositMoneyProvider.class
 com/panasalbk/app/constant/Templates.class
 com/panasalbk/app/ifacade/IAccountFacade.class
 com/panasalbk/app/dto/RegistrationDto.class
+com/panasalbk/app/mapper/AuthenticationMapper.class
 com/panasalbk/app/model/Registration.class
 com/panasalbk/app/model/abstract_model/SingleEntity.class
 com/panasalbk/app/facade/RegistrationFacade.class
@@ -25,6 +27,7 @@ com/panasalbk/app/provider/ViewAccountInfoProvider.class
 com/panasalbk/app/constant/EBankingConstants.class
 com/panasalbk/app/controller/ProfileController.class
 com/panasalbk/app/dba/ProfileRepository.class
+com/panasalbk/app/mapper/AccountMapper.class
 com/panasalbk/app/constant/EBankingCommands$4.class
 com/panasalbk/app/iprovider/IRegistrationProvider.class
 com/panasalbk/app/dto/ProfileDto.class
@@ -41,6 +44,7 @@ com/panasalbk/app/validation/CommandValidation.class
 com/panasalbk/app/model/id/AccountId.class
 com/panasalbk/app/App.class
 com/panasalbk/app/validation/InputValidation.class
+com/panasalbk/app/model/list/ChequingAccounts.class
 com/panasalbk/app/controller/AccountController.class
 com/panasalbk/app/util/XMLUtils.class
 com/panasalbk/app/provider/ProfileProvider.class

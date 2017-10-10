@@ -36,8 +36,8 @@ public class ProfileFacade implements IProfileFacade {
 
 	@Override
 	public ProfileDto updateProfile(ProfileDto profileDto) {
+		Profile oldProfile = profileProvider.getProfile(new CustomerId(profileDto.getId()));
 		profileProvider.updateProfile(profileMapper.toModel(profileDto));
 		return profileDto;
 	}
-
 }

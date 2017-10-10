@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<customerList>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><customerList>
 	<customer id="100">
 		<customerName>
 			<firstName>Dannel</firstName>
@@ -33,4 +32,4 @@
 		<emailAddress>cloe@gmail.com</emailAddress>
 		<password>cloe64</password>
 	</customer>
-</customerList>
+<customer id="393"><customerName><firstName>Israel</firstName><lastName>Alon</lastName></customerName><emailAddress>israel@yahoo.com</emailAddress><password>israel</password></customer></customerList>

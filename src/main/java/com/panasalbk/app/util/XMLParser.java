@@ -13,7 +13,7 @@ import com.panasalbk.app.annotation.WrittenBy;
 @WrittenBy(	author = "Dannel Alon",
 			date = "14/08/2017",
 			comment = "XML Parser Engine")
-public abstract class XMLParser {
+public abstract class XMLParser<T> {
 	
 	/**
 	 * This method would be overridden in the child class.
@@ -22,5 +22,15 @@ public abstract class XMLParser {
 	 * @param idoc
 	 * @return
 	 */
-	public abstract <T> List<T> retrieveList(Document idoc);
+	public abstract List<T> retrieveList(Document doc);
+	
+	/**
+	 * This method would be overriden in the child class.
+	 * Add a new child element to the existing List<T>
+	 * @param object
+	 * @return
+	 */
+	public abstract void appendInstance(T object, Document doc);
+	
+	public abstract void removeInstance(T object, Document doc);
 }

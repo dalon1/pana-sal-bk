@@ -4,9 +4,15 @@ import java.io.File;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
+import com.panasalbk.app.constant.Templates;
 
 public class XMLUtils {
 	/**
@@ -82,6 +88,36 @@ public class XMLUtils {
 			return element.getAttribute(field);
 		} catch (Exception ex) {
 			return null;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param doc
+	 * @param tagName
+	 * @param value
+	 * @return
+	 */
+	public static Element createElement(Document doc, String tagName, String value) {
+		try {
+			Element element = doc.createElement(tagName);
+			element.appendChild(doc.createTextNode(value));
+			return element;
+		} catch (Exception ex) {
+			return null;
+		}
+	}
+	
+	public static void writeDocument(Document doc) {
+		try {
+			TransformerFactory factory = TransformerFactory.newInstance();
+			Transformer transformer = factory.newTransformer();
+			DOMSource domSource = new DOMSource(doc);
+			// THIS NEED TO BE CHANGED >>>
+			StreamResult streamResult = new StreamResult(new File(Templates.getCustomerPath()));
+			transformer.transform(domSource, streamResult);
+		} catch (Exception e) {
+			System.out.printf("A la mierda con esto: %s\n", e.getMessage());
 		}
 	}
 }

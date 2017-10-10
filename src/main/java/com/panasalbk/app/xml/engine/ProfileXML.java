@@ -18,18 +18,18 @@ import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
 @Component
-public class ProfileXML extends XMLParser {
+public class ProfileXML extends XMLParser<Profile> {
 
 	@Override
-	public List<Profile> retrieveList(Document idoc) {
+	public List<Profile> retrieveList(Document doc) {
 		// TODO Auto-generated method stub
 		List<Profile> profileList = new ArrayList<Profile>();
 		NodeList nodeList = null;
 		Node node = null;
 		String root = null;
 		try {
-			root = idoc.getNodeName();
-			nodeList = idoc.getElementsByTagName("customer");
+			root = doc.getNodeName();
+			nodeList = doc.getElementsByTagName("customer");
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				node = nodeList.item(i);
 				
@@ -53,6 +53,35 @@ public class ProfileXML extends XMLParser {
 			System.out.println("Error: " + ex.getMessage());
 		}
 		return null;
+	}
+
+	@Override
+	public void appendInstance(Profile profile, Document doc) {
+		Element root= null;
+		Element profileElement = null;
+		try {
+			root = doc.getDocumentElement();
+			profileElement = doc.createElement("customer");
+			profileElement.setAttribute("id", profile.getId().getId().toString());
+			Element customerName = XMLUtils.createElement(doc, "customerName", "");
+			customerName.appendChild(XMLUtils.createElement(doc, "firstName", profile.getCustomerName().getFirstName()));
+			customerName.appendChild(XMLUtils.createElement(doc, "lastName", profile.getCustomerName().getLastName()));
+			profileElement.appendChild(customerName);
+			profileElement.appendChild(XMLUtils.createElement(doc, "emailAddress", profile.getEmailAddress()));
+			profileElement.appendChild(XMLUtils.createElement(doc, "password", profile.getPassword()));			
+			root.appendChild(profileElement);
+			XMLUtils.writeDocument(doc);
+			//return profile;
+		} catch (Exception ex) {
+			System.out.println("Error: " + ex.getMessage());
+		}
+		//return null;
+	}
+
+	@Override
+	public void removeInstance(Profile object, Document doc) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

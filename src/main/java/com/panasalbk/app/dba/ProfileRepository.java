@@ -19,4 +19,10 @@ public class ProfileRepository {
 		Document document = XMLUtils.parseDocument(file);
 		return new ProfileXML().retrieveList(document);
 	}
+	
+	public static void addProfile(Profile profile) {
+		File file = XMLUtils.createFile(Templates.getCustomerPath());
+		Document document = XMLUtils.parseDocument(file);
+		new ProfileXML().appendInstance(profile, document);
+	}
 }

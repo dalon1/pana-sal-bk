@@ -17,7 +17,7 @@ import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
 @Component
-public class CustomerXML extends XMLParser {
+public class CustomerXML extends XMLParser<Customer> {
 
 	@Override
 	public List<Customer> retrieveList(Document idoc) {
@@ -51,6 +51,18 @@ public class CustomerXML extends XMLParser {
 			System.out.println("Error: " + ex.getMessage());
 		}
 		return null;
+	}
+
+	@Override
+	public void appendInstance(Customer object, Document doc) {
+		// TODO Auto-generated method stub
+		//return null;
+	}
+
+	@Override
+	public void removeInstance(Customer object, Document doc) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
