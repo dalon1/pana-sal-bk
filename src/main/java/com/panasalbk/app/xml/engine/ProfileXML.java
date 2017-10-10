@@ -45,6 +45,7 @@ public class ProfileXML extends XMLParser<Profile> {
 						customerName.setMiddleName(XMLUtils.getElementChildValue(element, "customerName", "middleName"));
 					customerName.setLastName(XMLUtils.getElementChildValue(element, "customerName", "lastName"));
 					profile.setCustomerName(customerName);
+					profile.setPhone(XMLUtils.getElementValue(element, "phone"));
 					profileList.add(profile);
 				}
 			}

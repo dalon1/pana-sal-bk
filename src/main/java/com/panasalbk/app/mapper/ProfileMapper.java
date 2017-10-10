@@ -2,6 +2,7 @@ package com.panasalbk.app.mapper;
 
 import org.springframework.stereotype.Component;
 
+import com.panasalbk.app.dto.PhoneDto;
 import com.panasalbk.app.dto.ProfileDto;
 import com.panasalbk.app.model.CustomerName;
 import com.panasalbk.app.model.Profile;
@@ -18,7 +19,7 @@ public class ProfileMapper extends Mapper<ProfileDto, Profile> {
 		profileDto.setId(model.getId() != null ? model.getId().getId().toString() : null);
 		profileDto.setCustomerName(model.getCustomerName() != null ? model.getCustomerName() : null);
 		profileDto.setEmailAddress(!StringUtils.isEmpty(model.getEmailAddress()) ? model.getEmailAddress() : null);
-		profileDto.setPhone(!StringUtils.isEmpty(model.getPhone()) ? model.getPhone() : null);
+		profileDto.setPhone(!StringUtils.isEmpty(model.getPhone()) ? PhoneDto.toDto(model.getPhone()) : null);
 		profileDto.setPassword(!StringUtils.isEmpty(model.getPassword())? model.getPassword() : null);
 		return profileDto;
 	}
@@ -33,8 +34,9 @@ public class ProfileMapper extends Mapper<ProfileDto, Profile> {
 			profile.setEmailAddress(dto.getEmailAddress());
 		if (!StringUtils.isEmpty(dto.getPassword()))
 			profile.setPassword(dto.getPassword());
-		if (!StringUtils.isEmpty(dto.getPhone()))
-			profile.setPhone(dto.getPhone());
+		if (dto.getPhone() != null && 
+				!StringUtils.isEmpty(dto.getPhone().getFullNumber()))
+			profile.setPhone(dto.getPhone().getFullNumber());
 		return profile;
 	}
 	

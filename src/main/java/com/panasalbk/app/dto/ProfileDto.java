@@ -12,7 +12,7 @@ public class ProfileDto {
 	private CustomerName customerName;
 	private String emailAddress;
 	private String password;
-	private String phone;
+	private PhoneDto phone;
 	private Address address;
 	
 	public String getId() {
@@ -39,10 +39,10 @@ public class ProfileDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getPhone() {
+	public PhoneDto getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
+	public void setPhone(PhoneDto phone) {
 		this.phone = phone;
 	}
 	public Address getAddress() {

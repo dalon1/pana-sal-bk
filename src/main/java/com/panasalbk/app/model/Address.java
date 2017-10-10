@@ -84,5 +84,13 @@ public class Address {
 		setProvince(valProv);
 		setPostalCode(valPC);
 	}
+
+	public String getPlaceNumber() {
+		return placeNumber;
+	}
+
+	public void setPlaceNumber(String placeNumber) {
+		this.placeNumber = placeNumber;
+	}
 	
 }
