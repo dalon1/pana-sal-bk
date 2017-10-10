@@ -1,9 +1,6 @@
-com/panasalbk/app/test/providers/AccountProviderTest.class
 com/panasalbk/app/testing/mocks/MockCustomer.class
 com/panasalbk/app/AppTest.class
-com/panasalbk/app/testing/RegistrationTest.class
 com/panasalbk/app/testing/AuthenticationTest.class
-com/panasalbk/app/test/providers/AuthenticationProviderTest.class
 com/panasalbk/app/testing/EBankingGeneralTest.class
 com/panasalbk/app/testing/xml/CardXMLTest.class
 com/panasalbk/app/testing/xml/CustomerXMLTest.class

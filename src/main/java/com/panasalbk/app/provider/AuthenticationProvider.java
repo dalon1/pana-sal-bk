@@ -3,6 +3,8 @@ package com.panasalbk.app.provider;
 import java.util.List;
 import java.util.Scanner;
 
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Component;
 
 import com.panasalbk.app.iprovider.IAuthenticationProvider;
@@ -19,6 +21,9 @@ import com.panasalbk.app.util.ScanUtils;
 @Component
 public class AuthenticationProvider implements IAuthenticationProvider {
 
+	@Inject
+	CustomerRepository customerRepository;
+	
 	@Override
 	public Authentication authenticate(Authentication authentication) {
 		// TODO Auto-generated method stub
@@ -27,7 +32,7 @@ public class AuthenticationProvider implements IAuthenticationProvider {
 			authentication.setIsAuthentic(false);
 		}
 		
-		for (Customer customer : CustomerRepository.getCustomerList()) {
+		for (Customer customer : customerRepository.getCustomerList()) {
 			if (customer.getEmailAddress().equalsIgnoreCase(authentication.getUsername()) &&
 					customer.getPassword().equals(authentication.getPassword()))
 				authentication.setAuthenticCust(customer);

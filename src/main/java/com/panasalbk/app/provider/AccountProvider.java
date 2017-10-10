@@ -16,6 +16,9 @@ import com.panasalbk.app.model.id.CustomerId;
 @Component
 public class AccountProvider implements IAccountProvider{
 	
+	@Inject
+	CardRepository cardRepository;
+	
 	@Override
 	public Card addCard() {
 		// TODO Auto-generated method stub
@@ -36,7 +39,7 @@ public class AccountProvider implements IAccountProvider{
 
 	@Override
 	public List<Card> findCards(CustomerId customerId) {
-		List<Card> cardList = CardRepository.getCardList();
+		List<Card> cardList = cardRepository.getCardList();
 		List<Card> customerCardList = new ArrayList<Card>();
 		for (Card card : cardList) {
 			if (card.getCustomerId().getId().equals(customerId.getId()))  {

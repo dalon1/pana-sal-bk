@@ -21,10 +21,10 @@ import com.panasalbk.app.xml.engine.CardXML;
 		author = "Dannel Alon",
 		date = "04/09/2017",
 		comment = "Simulate a fake database. XML Templates used.")
+@Component
 public class CardRepository {
 
-	
-	public  static List<Card> getCardList() {
+	public List<Card> getCardList() {
 		File file = XMLUtils.createFile(Templates.getCardPath());
 		Document document = XMLUtils.parseDocument(file);
 		return new CardXML().retrieveList(document);

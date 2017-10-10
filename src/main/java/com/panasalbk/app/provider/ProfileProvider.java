@@ -2,6 +2,8 @@ package com.panasalbk.app.provider;
 
 import java.util.Random;
 
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Component;
 
 import com.panasalbk.app.dba.ProfileRepository;
@@ -13,9 +15,12 @@ import com.panasalbk.app.xml.engine.ProfileXML;
 @Component
 public class ProfileProvider implements IProfileProvider {
 
+	@Inject 
+	ProfileRepository profileRepository;
+	
 	@Override
 	public Profile getProfile(CustomerId customerId) {
-		for (Profile profile : ProfileRepository.getProfileList()) {
+		for (Profile profile : profileRepository.getProfileList()) {
 			if (profile.getId().getId().equals(customerId.getId()))
 				return profile;
 		}
@@ -25,7 +30,7 @@ public class ProfileProvider implements IProfileProvider {
 	@Override
 	public Profile addProfile(Profile profile) {
 		profile.setId(new CustomerId(Integer.toString(new Random().nextInt(1000))));
-		ProfileRepository.addProfile(profile);
+		profileRepository.addProfile(profile);
 		return getProfile(profile.getId());
 	}
 

@@ -2,6 +2,8 @@ package com.panasalbk.app.provider;
 
 import java.util.Scanner;
 
+import javax.inject.Inject;
+
 import com.panasalbk.app.annotation.WrittenBy;
 import com.panasalbk.app.dba.CustomerRepository;
 import com.panasalbk.app.util.ScanUtils;
@@ -15,6 +17,9 @@ import com.panasalbk.app.model.Registration;
 		date = "30/07/2017",
 		comment = "Implementing behavior for customer registration")
 public class RegistrationProvider implements IRegistrationProvider {
+	
+	@Inject
+	CustomerRepository customerRepository;
 	
 	public Registration registration;
 
@@ -39,7 +44,7 @@ public class RegistrationProvider implements IRegistrationProvider {
 	 * */
 	@Override
 	public boolean checkCustomerUniqueness(Customer customer) {
-		for (Customer existingCustomer : CustomerRepository.getCustomerList()) {
+		for (Customer existingCustomer : customerRepository.getCustomerList()) {
 			if (existingCustomer.getEmailAddress().equalsIgnoreCase(customer.getEmailAddress())) {
 				// Removing customer from registration.
 				this.registration.setRegisteredCustomer(null);

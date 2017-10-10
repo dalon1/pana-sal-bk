@@ -5,6 +5,18 @@
    xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
+   <!-- DBA - Repositories : Start -->
+   <bean id = "cardRepository" class = "com.panasalbk.app.dba.CardRepository">
+      <!-- collaborators and configuration for this bean go here -->
+   </bean>
+   <bean id = "customerRepository" class = "com.panasalbk.app.dba.CustomerRepository">
+      <!-- collaborators and configuration for this bean go here -->
+   </bean>
+   <bean id = "profileRepository" class = "com.panasalbk.app.dba.ProfilesRepository">
+      <!-- collaborators and configuration for this bean go here -->
+   </bean>
+   <!-- DBA - Repositories : End -->
+   
    <!-- A simple bean definition -->
    <bean id = "profileFacade" class = "com.panasalbk.app.facade.ProfileFacade">
       <!-- collaborators and configuration for this bean go here -->

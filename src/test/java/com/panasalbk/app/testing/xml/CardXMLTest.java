@@ -2,7 +2,12 @@ package com.panasalbk.app.testing.xml;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import com.panasalbk.app.dba.CardRepository;
 import com.panasalbk.app.model.CreditCard;
@@ -11,11 +16,15 @@ import com.panasalbk.app.model.abstract_model.Card;
 
 import org.junit.Assert;
 
+@RunWith(MockitoJUnitRunner.class)
 public class CardXMLTest {
 
+	@InjectMocks
+	CardRepository cardRepository;
+	
 	@Test
 	public void testRetrievingDebitCardSuccess() {
-		List<Card> cardList = CardRepository.getCardList();
+		List<Card> cardList = cardRepository.getCardList();
 		Assert.assertEquals(3, cardList.size());
 		Card card = cardList.get(0);
 		Assert.assertNotNull(card);
@@ -30,7 +39,7 @@ public class CardXMLTest {
 	
 	@Test
 	public void testRetrievingCreditCardSuccess(){
-		List<Card> cardList = CardRepository.getCardList();
+		List<Card> cardList = cardRepository.getCardList();
 		Assert.assertEquals(3, cardList.size());
 		Card card = cardList.get(1);
 		Assert.assertNotNull(card);

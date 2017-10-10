@@ -1,10 +1,10 @@
-/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/test/providers/AccountProviderTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/mocks/MockCustomer.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/utils/StringUtilsTest.java
-/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/test/providers/AuthenticationProviderTest.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/test/provider/AccountProviderTest.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/test/provider/RegistrationProviderTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/EBankingGeneralTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/xml/CustomerXMLTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/AppTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/AuthenticationTest.java
-/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/RegistrationTest.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/test/provider/AuthenticationProviderTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/test/java/com/panasalbk/app/testing/xml/CardXMLTest.java
