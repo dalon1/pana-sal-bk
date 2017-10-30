@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Card Type 0 = DEBIT 	-->
+<!-- Card Type 1 = CREDIT 	-->
+<!-- Card Type 2 = PREPAID 	-->
+<cardList>
+	<card>
+		<customerId>100</customerId>
+		<cardType>0</cardType>
+		<cardNumber></cardNumber>
+		<pin>4567</pin>
+		<cardHolder>Dannel Alon</cardHolder>
+		<expiryDate></expiryDate>
+		<validFromDate></validFromDate>
+		<isTap></isTap>
+	</card>
+	
+	<card>
+		<customerId>100</customerId>
+		<cardType>1</cardType>
+		<cardNumber></cardNumber>
+		<pin>9876</pin>
+		<cardHolder>Dannel Alon</cardHolder>
+		<expiryDate></expiryDate>
+		<validFromDate></validFromDate>
+		<isTap></isTap>
+	</card>
+	
+	<card>
+		<customerId>200</customerId>
+		<cardType>1</cardType>
+		<cardNumber></cardNumber>
+		<pin>1234</pin>
+		<cardHolder>Joel Israel Alon</cardHolder>
+		<expiryDate></expiryDate>
+		<validFromDate></validFromDate>
+		<isTap></isTap>
+	</card>
+</cardList>

@@ -22,9 +22,12 @@ com/panasalbk/app/enumeration/CardType.class
 com/panasalbk/app/model/id/CustomerId.class
 com/panasalbk/app/provider/WithdrawMoneyProvider.class
 com/panasalbk/app/dba/CardRepository.class
+com/panasalbk/app/ifacade/IATMFacade.class
+com/panasalbk/app/dto/BalanceDto.class
 com/panasalbk/app/ifacade/IRegistrationFacade.class
 com/panasalbk/app/provider/ViewAccountInfoProvider.class
 com/panasalbk/app/constant/EBankingConstants.class
+com/panasalbk/app/controller/ATMController.class
 com/panasalbk/app/controller/ProfileController.class
 com/panasalbk/app/dba/ProfileRepository.class
 com/panasalbk/app/mapper/AccountMapper.class
@@ -32,7 +35,6 @@ com/panasalbk/app/constant/EBankingCommands$4.class
 com/panasalbk/app/iprovider/IRegistrationProvider.class
 com/panasalbk/app/dto/ProfileDto.class
 com/panasalbk/app/dba/CustomerRepository.class
-com/panasalbk/app/dba/CustomerRepository$1.class
 com/panasalbk/app/provider/PayProvider.class
 com/panasalbk/app/constant/EBankingCommandNumbers.class
 com/panasalbk/app/object_factory/provider/ObjectFactory.class
@@ -44,6 +46,7 @@ com/panasalbk/app/validation/CommandValidation.class
 com/panasalbk/app/model/id/AccountId.class
 com/panasalbk/app/App.class
 com/panasalbk/app/validation/InputValidation.class
+com/panasalbk/app/dto/InternalTransferDto.class
 com/panasalbk/app/model/list/ChequingAccounts.class
 com/panasalbk/app/controller/AccountController.class
 com/panasalbk/app/util/XMLUtils.class
@@ -58,6 +61,7 @@ com/panasalbk/app/constant/EBankingCommands.class
 com/panasalbk/app/provider/CheckBalanceProvider.class
 com/panasalbk/app/model/Profile.class
 com/panasalbk/app/iprovider/IAuthenticationProvider.class
+com/panasalbk/app/dto/WithdrawalDto.class
 com/panasalbk/app/iprovider/IAccountProvider.class
 com/panasalbk/app/model/list/Accounts.class
 com/panasalbk/app/model/SavingAccount.class
@@ -79,8 +83,12 @@ com/panasalbk/app/ifacade/IAuthenticationFacade.class
 com/panasalbk/app/model/abstract_model/Mapper.class
 com/panasalbk/app/model/CustomerName.class
 com/panasalbk/app/model/DebitCard.class
+com/panasalbk/app/dto/TransactionHistoryDto.class
+com/panasalbk/app/dto/PhoneDto.class
+com/panasalbk/app/dto/DepositDto.class
 com/panasalbk/app/model/CreditCard.class
 com/panasalbk/app/provider/AuthenticationProvider.class
 com/panasalbk/app/model/BankAccount.class
+com/panasalbk/app/dto/AmountDto.class
 com/panasalbk/app/provider/AccountProvider.class
 com/panasalbk/app/provider/RegistrationProvider.class

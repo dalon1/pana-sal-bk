@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><customerList>
+	<customer id="100">
+		<customerName>
+			<firstName>Dannel</firstName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>dalon@cibc.com</emailAddress>
+		<password>dalon</password>
+		<phone>6402934949</phone>
+	</customer>
+	<customer id="200">
+		<customerName>
+			<firstName>Joel</firstName>
+			<middleName>Israel</middleName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>joel@gmail.com</emailAddress>
+		<password>password</password>
+		<phone>6402934949</phone>
+	</customer>
+	<customer id="300">
+		<customerName>
+			<firstName>Eitan</firstName>
+			<lastName>Alon</lastName>
+		</customerName>
+		<emailAddress>eitan@gmail.com</emailAddress>
+		<password>password</password>
+		<phone>6402934949</phone>
+	</customer>
+	<customer id="400">
+		<customerName>
+			<firstName>Cloe</firstName>
+			<lastName>Alonita</lastName>
+		</customerName>
+		<emailAddress>cloe@gmail.com</emailAddress>
+		<password>cloe64</password>
+	</customer>
+<customer id="393"><customerName><firstName>Israel</firstName><lastName>Alon</lastName></customerName><emailAddress>israel@yahoo.com</emailAddress><password>israel</password></customer></customerList>

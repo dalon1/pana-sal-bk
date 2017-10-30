@@ -14,8 +14,11 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/executable/EBankingSystemTest.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/ifacade/IAccountFacade.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/WithdrawMoneyProvider.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/ifacade/IATMFacade.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/Profile.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/InternalTransferDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/BankAccount.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/WithdrawalDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/facade/AccountFacade.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/enumeration/CardType.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/mapper/ProfileMapper.java
@@ -34,7 +37,9 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/Customer.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/iprovider/IAccountProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/list/Accounts.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/TransactionHistoryDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/abstract_model/Account.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/BalanceDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/RegistrationDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controller/AccountController.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/list/CreditCards.java
@@ -60,11 +65,14 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/util/XMLUtils.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/util/ScanUtils.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dba/CustomerRepository.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/DepositDto.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/AmountDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dba/ProfileRepository.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/iprovider/IRegistrationProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/ChequingAccount.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/SavingAccount.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/xml/engine/CustomerXML.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/PhoneDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/model/id/CustomerId.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constant/EBankingCommands.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/xml/engine/ProfileXML.java
@@ -72,6 +80,7 @@
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/constant/EBankingCommandNumbers.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/provider/RegistrationProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/iprovider/IProfileProvider.java
+/Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/controller/ATMController.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/dto/AccountDto.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/iprovider/IPayProvider.java
 /Users/AloniD/alon_spring_projects/pana_sal_bk_ws/pana-sal-bk/src/main/java/com/panasalbk/app/ifacade/IRegistrationFacade.java

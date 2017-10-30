@@ -2,7 +2,7 @@ package com.panasalbk.app.constant;
 
 public class Templates {
 
-	private final static String templateDirectory = "src/main/java/com/panasalbk/app/templates/";
+	private final static String templateDirectory = "resources/templates/";
 	/*
 	 * XML Templates Paths
 	 */
