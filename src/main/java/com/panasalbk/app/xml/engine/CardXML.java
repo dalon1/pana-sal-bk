@@ -15,6 +15,8 @@ import com.panasalbk.app.model.CreditCard;
 import com.panasalbk.app.model.DebitCard;
 import com.panasalbk.app.model.abstract_model.Card;
 import com.panasalbk.app.model.id.CustomerId;
+import com.panasalbk.app.util.CardUtils;
+import com.panasalbk.app.util.StringUtils;
 import com.panasalbk.app.util.XMLParser;
 import com.panasalbk.app.util.XMLUtils;
 
@@ -71,7 +73,10 @@ public class CardXML extends XMLParser<Card> {
 		debitCard.setCardType(CardType.getCardType(Integer.valueOf(XMLUtils.getElementValue(element,"cardType"))).name());
 		debitCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
 		debitCard.setPin(XMLUtils.getElementValue(element,"pin"));
-		
+		debitCard.setCardNumber(CardUtils.formatCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
+		debitCard.setCardNumberMasked(CardUtils.maskCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
+		if (!StringUtils.isEmpty(XMLUtils.getElementValue(element, "isTap")))
+			debitCard.setTap(Integer.parseInt(XMLUtils.getElementValue(element, "isTap")) == EBankingConstants.CARD_IS_TAP);
 		return debitCard;
 	}
 	
@@ -82,7 +87,10 @@ public class CardXML extends XMLParser<Card> {
 		creditCard.setCardType(CardType.getCardType(Integer.valueOf(XMLUtils.getElementValue(element,"cardType"))).name());
 		creditCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
 		creditCard.setPin(XMLUtils.getElementValue(element,"pin"));
-		
+		creditCard.setCardNumber(CardUtils.formatCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
+		creditCard.setCardNumberMasked(CardUtils.maskCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
+		if (!StringUtils.isEmpty(XMLUtils.getElementValue(element, "isTap")))
+			creditCard.setTap(Integer.parseInt(XMLUtils.getElementValue(element, "isTap")) == EBankingConstants.CARD_IS_TAP);
 		return creditCard;
 	}
 	

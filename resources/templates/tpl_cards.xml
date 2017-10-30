@@ -6,33 +6,33 @@
 	<card>
 		<customerId>100</customerId>
 		<cardType>0</cardType>
-		<cardNumber></cardNumber>
+		<cardNumber>1000100010001000</cardNumber>
 		<pin>4567</pin>
 		<cardHolder>Dannel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
-		<isTap></isTap>
+		<isTap>1</isTap>
 	</card>
 	
 	<card>
 		<customerId>100</customerId>
 		<cardType>1</cardType>
-		<cardNumber></cardNumber>
+		<cardNumber>2000200020002000</cardNumber>
 		<pin>9876</pin>
 		<cardHolder>Dannel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
-		<isTap></isTap>
+		<isTap>0</isTap>
 	</card>
 	
 	<card>
 		<customerId>200</customerId>
 		<cardType>1</cardType>
-		<cardNumber></cardNumber>
+		<cardNumber>3000300030003000</cardNumber>
 		<pin>1234</pin>
 		<cardHolder>Joel Israel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
-		<isTap></isTap>
+		<isTap>1</isTap>
 	</card>
 </cardList>
