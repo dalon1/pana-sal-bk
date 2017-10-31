@@ -8,7 +8,6 @@
 		<cardType>0</cardType>
 		<cardNumber>1000100010001000</cardNumber>
 		<pin>4567</pin>
-		<cardHolder>Dannel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
 		<isTap>1</isTap>
@@ -19,7 +18,6 @@
 		<cardType>1</cardType>
 		<cardNumber>2000200020002000</cardNumber>
 		<pin>9876</pin>
-		<cardHolder>Dannel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
 		<isTap>0</isTap>
@@ -30,7 +28,6 @@
 		<cardType>1</cardType>
 		<cardNumber>3000300030003000</cardNumber>
 		<pin>1234</pin>
-		<cardHolder>Joel Israel Alon</cardHolder>
 		<expiryDate></expiryDate>
 		<validFromDate></validFromDate>
 		<isTap>1</isTap>

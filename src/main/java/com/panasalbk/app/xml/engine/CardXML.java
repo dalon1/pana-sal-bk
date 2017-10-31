@@ -71,7 +71,7 @@ public class CardXML extends XMLParser<Card> {
 		DebitCard debitCard = new DebitCard();
 		debitCard.setCustomerId(new CustomerId(XMLUtils.getElementValue(element, "customerId")));
 		debitCard.setCardType(CardType.getCardType(Integer.valueOf(XMLUtils.getElementValue(element,"cardType"))).name());
-		debitCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
+		//debitCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
 		debitCard.setPin(XMLUtils.getElementValue(element,"pin"));
 		debitCard.setCardNumber(CardUtils.formatCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
 		debitCard.setCardNumberMasked(CardUtils.maskCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
@@ -85,7 +85,7 @@ public class CardXML extends XMLParser<Card> {
 		CreditCard creditCard = new CreditCard();
 		creditCard.setCustomerId(new CustomerId(XMLUtils.getElementValue(element, "customerId")));
 		creditCard.setCardType(CardType.getCardType(Integer.valueOf(XMLUtils.getElementValue(element,"cardType"))).name());
-		creditCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
+		//creditCard.setCardHolder(XMLUtils.getElementValue(element, "cardHolder"));
 		creditCard.setPin(XMLUtils.getElementValue(element,"pin"));
 		creditCard.setCardNumber(CardUtils.formatCardNumber(XMLUtils.getElementValue(element, "cardNumber")));
 		creditCard.setCardNumberMasked(CardUtils.maskCardNumber(XMLUtils.getElementValue(element, "cardNumber")));

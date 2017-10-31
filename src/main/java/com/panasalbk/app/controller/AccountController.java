@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.panasalbk.app.dto.AccountDto;
+import com.panasalbk.app.dto.BankInfoDto;
 import com.panasalbk.app.ifacade.IAccountFacade;
 import com.panasalbk.app.model.id.AccountId;
 
@@ -25,7 +26,7 @@ public class AccountController {
 	public IAccountFacade accountFacade;
 	
 	@RequestMapping(method = RequestMethod.GET)
-	public AccountDto getAccounts(@RequestParam(value = "customerId", required = true) String customerId) {
+	public BankInfoDto getAccounts(@RequestParam(value = "customerId", required = true) String customerId) {
 		return accountFacade.getAccounts(customerId);
 	}
 

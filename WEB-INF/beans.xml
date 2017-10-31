@@ -6,6 +6,9 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    
    <!-- DBA - Repositories : Start -->
+   <bean id = "accountRepository" class = "com.panasalbk.app.dba.AccountRepository">
+      <!-- collaborators and configuration for this bean go here -->
+   </bean>
    <bean id = "cardRepository" class = "com.panasalbk.app.dba.CardRepository">
       <!-- collaborators and configuration for this bean go here -->
    </bean>
@@ -38,5 +41,7 @@
    <bean id = "accountFacade" class = "com.panasalbk.app.facade.AccountFacade">
    </bean>
    <bean id = "accountMapper" class = "com.panasalbk.app.mapper.AccountMapper">
+   </bean>
+   <bean id = "bankInfoMapper" class = "com.panasalbk.app.mapper.BankInfoMapper">
    </bean>
 </beans>

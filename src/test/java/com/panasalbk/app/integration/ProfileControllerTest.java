@@ -21,12 +21,14 @@ import com.panasalbk.app.App;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { ApplicationContext.class })
 @WebAppConfiguration
+@Ignore
 public class ProfileControllerTest {
 
 	@Autowired
 	MockMvc mockMvc;
 	
 	@Test
+	@Ignore
 	public void getSingleProfileTest() throws Exception {
 		mockMvc.perform(get("/profile/100"))
 		.andDo(print())

@@ -15,28 +15,13 @@ public class AccountMapper extends Mapper<AccountDto, BankAccount> {
 	@Override
 	public AccountDto toDto(BankAccount model) {
 		// TODO Auto-generated method stub
-		AccountDto dto = new AccountDto();
-		if (model.getCreditCards() != null && !model.getCreditCards().isEmpty())
-			dto.setCreditCards(model.getCreditCards());
-		if (model.getDebitCards() != null && !model.getDebitCards().isEmpty())
-			dto.setDebitCards(model.getDebitCards());
-		/*if (model.getChequingAccounts() != null & !model.getChequingAccounts().isEmpty())
-			dto.setChequingAccounts(model.getChequingAccounts());
-		if (model.getSavingAccounts() != null && !model.getSavingAccounts().isEmpty())
-			dto.setSavingAccounts(model.getSavingAccounts());*/
-		return dto;
+		return null;
 	}
 
 	@Override
 	public BankAccount toModel(AccountDto dto) {
 		// TODO Auto-generated method stub
-		BankAccount model = new BankAccount();
-		if (StringUtils.isEmpty(dto.getCustomerId())) {
-			Customer customer = new Customer();
-			customer.setId(new CustomerId(dto.getCustomerId()));
-			model.setCustomer(customer);
-		}
-		return model;
+		return null;
 	}
 
 }

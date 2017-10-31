@@ -2,7 +2,7 @@ package com.panasalbk.app.iprovider;
 
 import java.util.List;
 
-import com.panasalbk.app.model.BankAccount;
+import com.panasalbk.app.model.abstract_model.Account;
 import com.panasalbk.app.model.abstract_model.Card;
 import com.panasalbk.app.model.id.CustomerId;
 
@@ -14,10 +14,10 @@ public interface IAccountProvider {
 	List<Card> findCards(CustomerId customerId);
 	Card findSingleCard(CustomerId customerId);
 	
-	BankAccount addBankAccount();
-	void updateBankAccount(BankAccount bankAccount);
+	Account addBankAccount();
+	void updateBankAccount(Account bankAccount);
 	// The Bank Account can't longer be retrieved from the get-call
-	BankAccount cancelBankAccount(BankAccount bankAccount);
-	List<BankAccount> findBankAccounts(CustomerId customerId);
-	BankAccount findBankAccount(CustomerId customerId);
+	Account cancelBankAccount(Account bankAccount);
+	List<Account> findBankAccounts(CustomerId customerId);
+	Account findBankAccount(CustomerId customerId);
 }

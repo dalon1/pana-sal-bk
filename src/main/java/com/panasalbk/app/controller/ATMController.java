@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.panasalbk.app.dto.BalanceDto;
-import com.panasalbk.app.dto.DepositDto;
 import com.panasalbk.app.dto.InternalTransferDto;
+import com.panasalbk.app.dto.TransactionDto;
 import com.panasalbk.app.dto.TransactionHistoryDto;
-import com.panasalbk.app.dto.WithdrawalDto;
 
 @RestController
 public class ATMController {
@@ -18,7 +16,7 @@ public class ATMController {
 	// Deposit
 	// 	add deposit
 	@RequestMapping(value = "/deposits", method = RequestMethod.POST)
-	public DepositDto deposit() {
+	public TransactionDto deposit() {
 		return null;
 	}
 	// 	cancel deposit
@@ -28,20 +26,20 @@ public class ATMController {
 	}
 	//	get deposit
 	@RequestMapping(value = "/deposits/{id}", method = RequestMethod.GET)
-	public DepositDto getSingleDeposit() {
+	public TransactionDto getSingleDeposit() {
 		return null;
 	}
 	
 	// get deposit history by customer
 	@RequestMapping(value = "/deposits", method = RequestMethod.GET)
-	public List<DepositDto> getDepositHistory() {
+	public List<TransactionDto> getDepositHistory() {
 		return null;
 	}
 	
 	// Withdrawal
 	//	add withdrawal
 	@RequestMapping(value = "/withdrawals", method = RequestMethod.POST)
-	public WithdrawalDto withdraw() {
+	public TransactionDto withdraw() {
 		return null;
 	}
 	
@@ -52,13 +50,13 @@ public class ATMController {
 	}
 	// get withdrawal
 	@RequestMapping(value = "/withdrawals/{id}", method = RequestMethod.GET)
-	public WithdrawalDto getSingleWithdrawal() {
+	public TransactionDto getSingleWithdrawal() {
 		return null;
 	}
 	
 	// get withdrawal history by customer
 	@RequestMapping(value = "/withdrawals", method = RequestMethod.GET)
-	public WithdrawalDto getWithdrawalHistory() {
+	public TransactionDto getWithdrawalHistory() {
 		return null;
 	}
 	// Internal Money Transfers
@@ -94,17 +92,17 @@ public class ATMController {
 	// Chequing balance
 	// get account balance
 	@RequestMapping(value = "/accountBalances/{id}", method = RequestMethod.GET)
-	public BalanceDto getAccountBalance() {
+	public TransactionDto getAccountBalance() {
 		return null;
 	}
 	// get debit balance
 	@RequestMapping(value = "/debitBalances/{id}", method = RequestMethod.GET)
-	public BalanceDto getDebitBalance() {
+	public TransactionDto getDebitBalance() {
 		return null;
 	}
 	// get credit balance
 	@RequestMapping(value = "/creditBalances/{id}", method = RequestMethod.GET)
-	public BalanceDto getCreditBalance() {
+	public TransactionDto getCreditBalance() {
 		return null;
 	}
 }

@@ -8,6 +8,7 @@ public class Templates {
 	 */
 	private final static String customerPath 		= templateDirectory + "tpl_customers.xml";
 	private final static String cardPath 			= templateDirectory + "tpl_cards.xml";
+	private final static String accountPath 		= templateDirectory + "tpl_accounts_#customerId#.xml";
 	
 	/*
 	 * XML Builder Factories
@@ -19,5 +20,9 @@ public class Templates {
 	
 	public static String getCardPath() {
 		return cardPath;
+	}
+	
+	public static String getAccountPath(String customerId) {
+		return accountPath.replace("#customerId#", customerId);
 	}
 }

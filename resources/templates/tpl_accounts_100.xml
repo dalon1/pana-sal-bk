@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<accounts>
+	<account id="ACC100">
+		<accountNumber>50000-20-50000</accountNumber>
+		<accountType>0</accountType>
+		<customerId>100</customerId>
+		<currentBalance>1000</currentBalance>
+		<availableBalance>1000</availableBalance>
+		<currency>CAD</currency>
+		<!-- Product name will be only numbers in the future -->
+		<productName>0</productName>
+	</account>
+	<account id="ACC200">
+		<accountNumber>90009-90-90009</accountNumber>
+		<accountType>1</accountType>
+		<customerId>100</customerId>
+		<currentBalance>1000</currentBalance>
+		<availableBalance>1000</availableBalance>
+		<currency>CAD</currency>
+		<productName>1</productName>
+	</account>
+	<account id="ACC300">
+		<accountNumber>30000-40-30000</accountNumber>
+		<accountType>1</accountType>
+		<customerId>100</customerId>
+		<currentBalance>10000</currentBalance>
+		<availableBalance>10000</availableBalance>
+		<currency>CAD</currency>
+		<productName>1</productName>
+	</account>
+</accounts>

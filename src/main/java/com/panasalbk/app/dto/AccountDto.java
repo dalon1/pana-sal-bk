@@ -10,40 +10,5 @@ import com.panasalbk.app.model.list.SavingAccounts;
 
 @JsonInclude(Include.NON_NULL)
 public class AccountDto {
-	private String customerId;
-	private ChequingAccounts chequingAccounts;
-	private SavingAccounts savingAccounts;
-	private DebitCards debitCards;
-	private CreditCards creditCards;
 	
-	public String getCustomerId() {
-		return customerId;
-	}
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
-	}
-	public DebitCards getDebitCards() {
-		return debitCards;
-	}
-	public void setDebitCards(DebitCards debitCards) {
-		this.debitCards = debitCards;
-	}
-	public CreditCards getCreditCards() {
-		return creditCards;
-	}
-	public void setCreditCards(CreditCards creditCards) {
-		this.creditCards = creditCards;
-	}
-	public ChequingAccounts getChequingAccounts() {
-		return chequingAccounts;
-	}
-	public void setChequingAccounts(ChequingAccounts chequingAccounts) {
-		this.chequingAccounts = chequingAccounts;
-	}
-	public SavingAccounts getSavingAccounts() {
-		return savingAccounts;
-	}
-	public void setSavingAccounts(SavingAccounts savingAccounts) {
-		this.savingAccounts = savingAccounts;
-	}
 }
