@@ -10,9 +10,11 @@ import org.springframework.stereotype.Component;
 import com.panasalbk.app.dba.AccountRepository;
 import com.panasalbk.app.dba.CardRepository;
 import com.panasalbk.app.iprovider.IAccountProvider;
+import com.panasalbk.app.iprovider.IProfileProvider;
 import com.panasalbk.app.model.BankAccount;
 import com.panasalbk.app.model.abstract_model.Account;
 import com.panasalbk.app.model.abstract_model.Card;
+import com.panasalbk.app.model.id.AccountId;
 import com.panasalbk.app.model.id.CustomerId;
 
 @Component
@@ -25,7 +27,7 @@ public class AccountProvider implements IAccountProvider{
 	AccountRepository accountRepository;
 	
 	@Inject
-	ProfileProvider profileProvider;
+	IProfileProvider profileProvider;
 	
 	@Override
 	public Card addCard() {
@@ -97,8 +99,25 @@ public class AccountProvider implements IAccountProvider{
 	}
 
 	@Override
-	public Account findBankAccount(CustomerId customerId) {
-		// TODO Auto-generated method stub
+	public Account findBankAccount(CustomerId customerId, String accountNumber) {
+		List<Account> accounts = this.findBankAccounts(customerId);
+		for (Account account : accounts) {
+			if (account.getAccountNumber().equalsIgnoreCase(accountNumber)) {
+				return account;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Account findBankAccount(CustomerId customerId, AccountId accountId) {
+		if (accountId == null) return null;
+		List<Account> accounts = this.findBankAccounts(customerId);
+		for (Account account : accounts) {
+			if (account.getId().getId().equals(accountId.getId())) {
+				return account;
+			}
+		}
 		return null;
 	}
 

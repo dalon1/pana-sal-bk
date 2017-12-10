@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.panasalbk.app.model.abstract_model.Account;
 import com.panasalbk.app.model.abstract_model.Card;
+import com.panasalbk.app.model.id.AccountId;
 import com.panasalbk.app.model.id.CustomerId;
 
 public interface IAccountProvider {
@@ -19,5 +20,7 @@ public interface IAccountProvider {
 	// The Bank Account can't longer be retrieved from the get-call
 	Account cancelBankAccount(Account bankAccount);
 	List<Account> findBankAccounts(CustomerId customerId);
-	Account findBankAccount(CustomerId customerId);
+	// THIS NEED TO BE REFACTORED >>> !!!!
+	Account findBankAccount(CustomerId customerId, String accountNumber);
+	Account findBankAccount(CustomerId customerId, AccountId accountId);
 }

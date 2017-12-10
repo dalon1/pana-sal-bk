@@ -44,4 +44,14 @@
    </bean>
    <bean id = "bankInfoMapper" class = "com.panasalbk.app.mapper.BankInfoMapper">
    </bean>
+   
+   <bean id = "transactionFacade" class = "com.panasalbk.app.facade.TransactionFacade">
+   </bean>
+   <bean id = "transactionProvider" class = "com.panasalbk.app.provider.TransactionProvider">
+   </bean>
+   <bean id = "transactionMapper" class = "com.panasalbk.app.mapper.TransactionMapper">
+   </bean>
+   <bean id = "transactionRepository" class = "com.panasalbk.app.dba.TransactionRepository">
+   </bean>
+   
 </beans>

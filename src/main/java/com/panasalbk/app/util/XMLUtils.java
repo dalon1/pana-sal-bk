@@ -108,13 +108,16 @@ public class XMLUtils {
 		}
 	}
 	
-	public static void writeDocument(Document doc) {
+	public static void writeDocument(Document doc, String path) {
 		try {
 			TransformerFactory factory = TransformerFactory.newInstance();
 			Transformer transformer = factory.newTransformer();
 			DOMSource domSource = new DOMSource(doc);
 			// THIS NEED TO BE CHANGED >>>
-			StreamResult streamResult = new StreamResult(new File(Templates.getCustomerPath()));
+			/***
+			 * ERROR FOUND HERE >>> MODIFY: SOL -> PASS NEW PARAMETER FOR PATH
+			 */
+			StreamResult streamResult = new StreamResult(new File(path));
 			transformer.transform(domSource, streamResult);
 		} catch (Exception e) {
 			System.out.printf("A la mierda con esto: %s\n", e.getMessage());

@@ -2,6 +2,10 @@ package com.panasalbk.app.controller;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,20 +13,25 @@ import org.springframework.web.bind.annotation.RestController;
 import com.panasalbk.app.dto.InternalTransferDto;
 import com.panasalbk.app.dto.TransactionDto;
 import com.panasalbk.app.dto.TransactionHistoryDto;
+import com.panasalbk.app.ifacade.ITransactionFacade;
+
 
 @RestController
 public class ATMController {
 	
+	@Inject
+	ITransactionFacade transactionFacade;
+	
 	// Deposit
 	// 	add deposit
 	@RequestMapping(value = "/deposits", method = RequestMethod.POST)
-	public TransactionDto deposit() {
-		return null;
+	public TransactionDto deposit(@RequestBody TransactionDto transactionDto) {
+		return transactionFacade.deposit(transactionDto);
 	}
 	// 	cancel deposit
-	@RequestMapping(value = "/deposits", method = RequestMethod.DELETE)
-	public void cancelDeposit() {
-		
+	@RequestMapping(value = "/deposits/{id}", method = RequestMethod.DELETE)
+	public void cancelDeposit(@PathVariable(value = "id") String transactionId) {
+		transactionFacade.cancelDeposit(transactionId);
 	}
 	//	get deposit
 	@RequestMapping(value = "/deposits/{id}", method = RequestMethod.GET)
@@ -33,14 +42,14 @@ public class ATMController {
 	// get deposit history by customer
 	@RequestMapping(value = "/deposits", method = RequestMethod.GET)
 	public List<TransactionDto> getDepositHistory() {
-		return null;
+		return transactionFacade.getTransactions();
 	}
 	
 	// Withdrawal
 	//	add withdrawal
 	@RequestMapping(value = "/withdrawals", method = RequestMethod.POST)
-	public TransactionDto withdraw() {
-		return null;
+	public TransactionDto withdraw(@RequestBody TransactionDto transactionDto) {
+		return transactionFacade.withdraw(transactionDto);
 	}
 	
 	// cancel withdrawal
@@ -56,13 +65,13 @@ public class ATMController {
 	
 	// get withdrawal history by customer
 	@RequestMapping(value = "/withdrawals", method = RequestMethod.GET)
-	public TransactionDto getWithdrawalHistory() {
-		return null;
+	public List<TransactionDto> getWithdrawalHistory() {
+		return transactionFacade.getTransactions();
 	}
 	// Internal Money Transfers
 	// add money transfer
 	@RequestMapping(value = "/internalTransfers", method = RequestMethod.POST)
-	public InternalTransferDto transferMoney() {
+	public InternalTransferDto transferMoney(@RequestBody TransactionDto transactionDto) {
 		return null;
 	}
 	

@@ -32,19 +32,19 @@ public class EBankingController {
 		
 		// -- 1000: start --
 		case CHECK_BALANCE:
-			CheckBalanceProvider checkBalancePro = new CheckBalanceProvider();
+			//CheckBalanceProvider checkBalancePro = new CheckBalanceProvider();
 			break;
 		// -- 1000: end --
 			
 		// -- 2000: start --
 		case DEPOSIT_MONEY:
-			DepositMoneyProvider depositMoneyPro = new DepositMoneyProvider();
+			//DepositMoneyProvider depositMoneyPro = new DepositMoneyProvider();
 			break;	
 		case DEPOSIT_CHEQUING_ACCOUNT:
-			DepositMoneyProvider depositChequingPro = new DepositMoneyProvider();
+			//DepositMoneyProvider depositChequingPro = new DepositMoneyProvider();
 			break;
 		case DEPOSIT_SAVING_ACCOUNT:
-			DepositMoneyProvider depositSavingPro = new DepositMoneyProvider();
+			//DepositMoneyProvider depositSavingPro = new DepositMoneyProvider();
 			break;
 		// -- 2000: end --
 			
@@ -68,25 +68,25 @@ public class EBankingController {
 			
 		// -- 5000: start --
 		case VIEW_ACCOUNT_INFORMATION:
-			ViewAccountInfoProvider viewAccountPro = new ViewAccountInfoProvider();
+			//ViewAccountInfoProvider viewAccountPro = new ViewAccountInfoProvider();
 			break;
 		case VIEW_CHEQUING_ACCOUNT_INFO:
-			ViewAccountInfoProvider viewChequingAccountPro = new ViewAccountInfoProvider();
+			//ViewAccountInfoProvider viewChequingAccountPro = new ViewAccountInfoProvider();
 			break;
 		case VIEW_SAVING_ACCOUNT_INFO:
-			ViewAccountInfoProvider viewSavingAccountPro = new ViewAccountInfoProvider();
+			//ViewAccountInfoProvider viewSavingAccountPro = new ViewAccountInfoProvider();
 			break;
 		// -- 5000: end --
 			
 		// -- 6000: start --
 		case WITHDRAW_MONEY:
-			WithdrawMoneyProvider withdrawMoneyPro = new WithdrawMoneyProvider();
+			//WithdrawMoneyProvider withdrawMoneyPro = new WithdrawMoneyProvider();
 			break;
 		case WITHDRAW_FROM_CHEQUING_ACCOUNT:
-			WithdrawMoneyProvider withdrawChequingPro = new WithdrawMoneyProvider();
+			//WithdrawMoneyProvider withdrawChequingPro = new WithdrawMoneyProvider();
 			break;
 		case WITHDRAW_FROM_SAVING_ACCOUNT:
-			WithdrawMoneyProvider withdrawSavingPro3 = new WithdrawMoneyProvider();
+			//WithdrawMoneyProvider withdrawSavingPro3 = new WithdrawMoneyProvider();
 			break;
 		// -- 6000: end --
 			

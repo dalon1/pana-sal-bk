@@ -9,6 +9,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import com.panasalbk.app.constant.Templates;
 import com.panasalbk.app.model.Customer;
 import com.panasalbk.app.model.CustomerName;
 import com.panasalbk.app.model.Profile;
@@ -71,7 +72,7 @@ public class ProfileXML extends XMLParser<Profile> {
 			profileElement.appendChild(XMLUtils.createElement(doc, "emailAddress", profile.getEmailAddress()));
 			profileElement.appendChild(XMLUtils.createElement(doc, "password", profile.getPassword()));			
 			root.appendChild(profileElement);
-			XMLUtils.writeDocument(doc);
+			XMLUtils.writeDocument(doc, Templates.getCustomerPath());
 			//return profile;
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex.getMessage());

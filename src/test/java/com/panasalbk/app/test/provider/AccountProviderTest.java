@@ -15,11 +15,14 @@ import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.junit.Ignore;
 
+import com.panasalbk.app.dba.AccountRepository;
 import com.panasalbk.app.dba.CardRepository;
-import com.panasalbk.app.iprovider.IAccountProvider;
+import com.panasalbk.app.iprovider.IProfileProvider;
 import com.panasalbk.app.model.CreditCard;
 import com.panasalbk.app.model.Customer;
+import com.panasalbk.app.model.CustomerName;
 import com.panasalbk.app.model.DebitCard;
+import com.panasalbk.app.model.Profile;
 import com.panasalbk.app.model.abstract_model.Card;
 import com.panasalbk.app.model.id.CustomerId;
 import com.panasalbk.app.provider.AccountProvider;
@@ -36,9 +39,16 @@ public class AccountProviderTest {
 	@Mock
 	CardRepository cardRepository;
 	
+	@Mock
+	AccountRepository accountRepository;
+	
+	@Mock
+	IProfileProvider profileProvider;
+	
 	@Before
 	public void setup() {
 		Mockito.when(cardRepository.getCardList()).thenReturn(mockCards());
+		Mockito.when(profileProvider.getProfile(any(CustomerId.class))).thenReturn(mockProfile());
 	}
 	
 	@Test
@@ -62,6 +72,16 @@ public class AccountProviderTest {
 		Customer customer = new Customer();
 		customer.setId(new CustomerId(id));
 		return customer;
+	}
+	
+	private Profile mockProfile() {
+		Profile profile = new Profile();
+		profile.setId(new CustomerId("100"));
+		CustomerName name = new CustomerName();
+		name.setFirstName("Dannel");
+		name.setLastName("Alon");
+		profile.setCustomerName(name);
+		return profile;
 	}
 	
 	private List<Card> mockCards() {
