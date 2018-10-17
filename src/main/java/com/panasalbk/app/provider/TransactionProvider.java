@@ -13,6 +13,7 @@ import com.panasalbk.app.iprovider.ITransactionProvider;
 import com.panasalbk.app.model.Transaction;
 import com.panasalbk.app.model.abstract_model.Account;
 import com.panasalbk.app.model.id.TransactionId;
+import com.panasalbk.app.util.IDUtils;
 
 @Component
 public class TransactionProvider implements ITransactionProvider {
@@ -26,8 +27,9 @@ public class TransactionProvider implements ITransactionProvider {
 	@Override
 	public Transaction deposit(Transaction transaction) {
 		// Setting ID
-		transaction.setId(new TransactionId("TXN" + Integer.toString(new Random().nextInt((999_999 - 100_000) + 1) + 100_000)));
+		transaction.setId(new TransactionId(IDUtils.createTransactionId()));
 		Account account = accountProvider.findBankAccount(transaction.getCustomerId(), transaction.getAccountNumber());
+		// TODO Throw exception if account not found
 		if (account != null) {
 			transaction.setAccountId(account.getId());
 			transaction.setAccountBalance(Double.toString(account.getBalance()));
@@ -41,8 +43,9 @@ public class TransactionProvider implements ITransactionProvider {
 	@Override
 	public Transaction withdraw(Transaction transaction) {
 		// TODO Auto-generated method stub
-		transaction.setId(new TransactionId("TXN" + Integer.toString(new Random().nextInt((999_999 - 100_000) + 1) + 100_000)));
+		transaction.setId(new TransactionId(IDUtils.createTransactionId()));
 		Account account = accountProvider.findBankAccount(transaction.getCustomerId(), transaction.getAccountNumber());
+		// TODO Throw exception if account not found
 		if (account != null) {
 			transaction.setAccountId(account.getId());
 			transaction.setAccountBalance(Double.toString(account.getBalance()));

@@ -1,7 +1,7 @@
 package com.panasalbk.app.enumeration;
 
 public enum AccountType {
-	CHECKING(0),
+	CHEQUING(0),
 	SAVING(1);
 	
 	private int index;

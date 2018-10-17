@@ -35,8 +35,8 @@ public class ATMController {
 	}
 	//	get deposit
 	@RequestMapping(value = "/deposits/{id}", method = RequestMethod.GET)
-	public TransactionDto getSingleDeposit() {
-		return null;
+	public TransactionDto getSingleDeposit(@PathVariable(value = "id") String transactionId) {
+		return transactionFacade.getSingleTransaction(transactionId);
 	}
 	
 	// get deposit history by customer
@@ -59,8 +59,8 @@ public class ATMController {
 	}
 	// get withdrawal
 	@RequestMapping(value = "/withdrawals/{id}", method = RequestMethod.GET)
-	public TransactionDto getSingleWithdrawal() {
-		return null;
+	public TransactionDto getSingleWithdrawal(@PathVariable(value = "id") String transactionId) {
+		return transactionFacade.getSingleTransaction(transactionId);
 	}
 	
 	// get withdrawal history by customer

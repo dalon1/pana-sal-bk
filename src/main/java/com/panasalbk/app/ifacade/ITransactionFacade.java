@@ -13,5 +13,7 @@ public interface ITransactionFacade {
 	// Probably, this method will never be implemented!!!
 	public TransactionDto cancelWithdrawal(String transactionId);
 	public List<TransactionDto> getWithdrawals();
+	public TransactionDto getSingleWithdrawal();
 	public List<TransactionDto> getTransactions();
+	public TransactionDto getSingleTransaction(String transactionId);
 }

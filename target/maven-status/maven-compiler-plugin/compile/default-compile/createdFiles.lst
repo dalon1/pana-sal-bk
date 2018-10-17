@@ -40,6 +40,7 @@ com/panasalbk/app/xml/engine/ProfileXML.class
 com/panasalbk/app/controller/EBankingController.class
 com/panasalbk/app/dto/TransactionDto.class
 com/panasalbk/app/model/abstract_model/Card.class
+com/panasalbk/app/util/IDUtils.class
 com/panasalbk/app/constant/EBankingCommands$2.class
 com/panasalbk/app/model/Customer.class
 com/panasalbk/app/util/StringUtils.class

@@ -71,4 +71,16 @@ public class TransactionFacade implements ITransactionFacade {
 		return transactionMapper.toDtoList(transactionProvider.getTransactions());
 	}
 
+	@Override
+	public TransactionDto getSingleWithdrawal() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TransactionDto getSingleTransaction(String transactionId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

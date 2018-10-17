@@ -66,7 +66,7 @@ public class AccountXML extends XMLParser<Account> {
 		ChequingAccount chequing = new ChequingAccount();
 		chequing.setId(new AccountId(XMLUtils.getAttributeValue(element, "id")));
 		chequing.setAccountNumber(XMLUtils.getElementValue(element, "accountNumber"));
-		chequing.setAccountType(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "accountType"))).name());
+		//chequing.setAccountType(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "accountType"))).name());
 		chequing.setBalance(Double.parseDouble(XMLUtils.getElementValue(element, "currentBalance")));
 		chequing.setAvailableFunds(Double.parseDouble(XMLUtils.getElementValue(element, "availableBalance")));
 		chequing.setProductName(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "productName"))).name());
@@ -76,10 +76,9 @@ public class AccountXML extends XMLParser<Account> {
 	private SavingAccount readSavingAccount(Element element) {
 		if (element == null) return null;
 		SavingAccount saving = new SavingAccount();
-		saving.setAccountType(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "accountType"))).name());
 		saving.setId(new AccountId(XMLUtils.getAttributeValue(element, "id")));
 		saving.setAccountNumber(XMLUtils.getElementValue(element, "accountNumber"));
-		saving.setAccountType(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "accountType"))).name());
+		//saving.setAccountType(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "accountType"))).name());
 		saving.setBalance(Double.parseDouble(XMLUtils.getElementValue(element, "currentBalance")));
 		saving.setAvailableFunds(Double.parseDouble(XMLUtils.getElementValue(element, "availableBalance")));
 		saving.setProductName(AccountType.getAccountType(Integer.valueOf(XMLUtils.getElementValue(element, "productName"))).name());
