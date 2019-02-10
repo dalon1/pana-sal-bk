@@ -1,12 +1,13 @@
 pipeline {
     agent any
     tools {
-        maven 'MAVEN'
+        maven 'M3'
     }
     stages {
         stage("Build & test") {
             steps {
                 script {
+                    sh "ls -al"
                     echo "Building and testing..."
                     sh "mvn clean install test"
                 }
