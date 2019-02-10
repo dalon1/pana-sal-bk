@@ -1,11 +1,11 @@
 pipeline {
     agent any
-    
     stages {
         stage("Build & test") {
             steps {
                 script {
                     echo "Building and testing..."
+                    sh "mvn clean install test"
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
 
     post {
         always {
-            echo "Release orchestration completed..."
+            junit '**/surefire-reports/TEST*.xml'
         }
     }
 }
