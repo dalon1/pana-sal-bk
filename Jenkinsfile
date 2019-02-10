@@ -7,7 +7,6 @@ pipeline {
         stage("Build & test") {
             steps {
                 script {
-                    sh "ls -al"
                     echo "Building and testing..."
                     sh "mvn clean install test"
                 }
@@ -17,6 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "Running static code analysis tools..."
+                    // todo: include findbugs, pmd, jacoco, others 
                 }
             }
         }
@@ -31,6 +31,7 @@ pipeline {
             steps {
                 script {
                     echo "Deploying..."
+                    // creating docker image for this project
                 }
             }
         }
