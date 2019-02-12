@@ -16,11 +16,13 @@ pipeline {
             steps {
                 script {
                     echo "Running static code analysis tools..."
-                    sh "mvn findbugs:findbugs pmd:pmd"
+                    sh "mvn findbugs:findbugs pmd:pmd checkstyle:checkstyle"
                     def findbugs = scanForIssues tool: spotBugs(pattern: '**/target/findbugsXml.xml')
                     publishIssues issues: [findbugs]
                     def pmd = scanForIssues tool: pmdParser(pattern: '**/target/pmd.xml')
                     publishIssues issues: [pmd]
+                    def checkstyle = scanForIssues tool: checkStyle(pattern: '**/target/checkstyle-result.xml')
+                    publishIssues issues: [checkstyle]
                 }
             }
         }
