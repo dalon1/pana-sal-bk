@@ -23,6 +23,7 @@ pipeline {
                     publishIssues issues: [pmd]
                     def checkstyle = scanForIssues tool: checkStyle(pattern: '**/target/checkstyle-result.xml')
                     publishIssues issues: [checkstyle]
+                    sh "mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sonarqubetoken"
                 }
             }
         }
