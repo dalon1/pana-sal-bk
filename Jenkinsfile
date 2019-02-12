@@ -26,6 +26,13 @@ pipeline {
                 }
             }
         }
+        stage("Tag") {
+            steps {
+                script {
+                    echo "Tagging..."
+                }
+            }
+        }
         stage("Approval") {
             steps {
                 script {
