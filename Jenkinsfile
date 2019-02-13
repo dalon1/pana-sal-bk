@@ -35,6 +35,18 @@ pipeline {
                 }
             }
         }
+        stage("Publish") {
+            steps {
+                script {
+                    echo "Publishing..."
+                    def artifactoryServer = Artifactory.server "MyArtifactory"
+                    def rtMaven = Artifactory.newMavenBuild()
+                    rtMaven.deployer server: artifactoryServer, releaseRepo: "lib-panasalbk-local", snapshotRepo: "lib-panasalbk-local"
+                    def buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install"
+                    artifactoryServer.publishBuildInfo buildInfo
+                }
+            }
+        }
         stage("Approval") {
             steps {
                 script {
