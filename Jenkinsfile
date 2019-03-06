@@ -1,14 +1,13 @@
 pipeline {
     agent any
-    tools {
-        maven 'M3'
-    }
     stages {
         stage("Build & test") {
             steps {
                 script {
                     echo "Building and testing..."
-                    sh "mvn clean install test"
+                    rtMaven = Artifactory.newMavenBuild()
+                    rtMaven.tool = "M3"
+                    buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install findbugs:findbugs pmd:pmd checkstyle:checkstyle"
                 }
             }
         }
@@ -16,7 +15,6 @@ pipeline {
             steps {
                 script {
                     echo "Running static code analysis tools..."
-                    sh "mvn findbugs:findbugs pmd:pmd checkstyle:checkstyle"
                     def findbugs = scanForIssues tool: spotBugs(pattern: '**/target/findbugsXml.xml')
                     publishIssues issues: [findbugs]
                     def pmd = scanForIssues tool: pmdParser(pattern: '**/target/pmd.xml')
@@ -28,29 +26,13 @@ pipeline {
                 }
             }
         }
-        stage("Tag") {
-            steps {
-                script {
-                    echo "Tagging..."
-                }
-            }
-        }
         stage("Publish") {
             steps {
                 script {
                     echo "Publishing..."
                     def artifactoryServer = Artifactory.server "MyArtifactory"
-                    def rtMaven = Artifactory.newMavenBuild()
                     rtMaven.deployer server: artifactoryServer, releaseRepo: "lib-panasalbk-local", snapshotRepo: "lib-panasalbk-local"
-                    def buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install"
                     artifactoryServer.publishBuildInfo buildInfo
-                }
-            }
-        }
-        stage("Approval") {
-            steps {
-                script {
-                    echo "Requesting approval.."
                 }
             }
         }
