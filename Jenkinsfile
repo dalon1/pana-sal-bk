@@ -5,9 +5,11 @@ pipeline {
             steps {
                 script {
                     echo "Building and testing..."
-                    rtMaven = Artifactory.newMavenBuild()
-                    rtMaven.tool = "M3"
-                    buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install findbugs:findbugs pmd:pmd checkstyle:checkstyle"
+                    withSonarQubeEnv("MySonarQube") {
+                        rtMaven = Artifactory.newMavenBuild()
+                        rtMaven.tool = "M3"
+                        buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install findbugs:findbugs pmd:pmd checkstyle:checkstyle"
+                    }
                 }
             }
         }
@@ -21,8 +23,6 @@ pipeline {
                     publishIssues issues: [pmd]
                     def checkstyle = scanForIssues tool: checkStyle(pattern: '**/target/checkstyle-result.xml')
                     publishIssues issues: [checkstyle]
-                    // todo: fix connection refused error
-                    //sh "mvn sonar:sonar -Dsonar.host.url=http://host.docker.internal:9000 -Dsonar.login=admin -Dsonar.password=admin"
                 }
             }
         }
