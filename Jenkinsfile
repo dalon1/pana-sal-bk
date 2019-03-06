@@ -8,7 +8,7 @@ pipeline {
                     withSonarQubeEnv("MySonarQube") {
                         rtMaven = Artifactory.newMavenBuild()
                         rtMaven.tool = "M3"
-                        buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install findbugs:findbugs pmd:pmd checkstyle:checkstyle"
+                        buildInfo = rtMaven.run pom: "pom.xml", goals: "clean install sonar:sonar findbugs:findbugs pmd:pmd checkstyle:checkstyle"
                     }
                 }
             }
