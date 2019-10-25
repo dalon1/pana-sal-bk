@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean install -X'
+    goals: 'clean install -X pmd:pmd findbugs:findbugs checkstyle:checkstyle'
     pmdRunAnalysis: true
     findBugsRunAnalysis: true
     checkStyleRynAnalyisis: true
